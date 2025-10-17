@@ -130,21 +130,31 @@ button {
 }
 
 /* ==============================
-   Logo en header – tamaño grande
+   Logo en header – tamaño grande y responsive
    ============================== */
-.lgx-logo img {
-    height: 120px;  /* ajusta la altura como quieras */
-    width: auto;    /* mantiene la proporción */
-    display: block;
+header .lgx-logo a img {
+    height: 110px !important;  /* tamaño ideal en escritorio */
+    width: auto !important;    
+    display: block !important;
 }
 
-.lgx-logo {
-    padding: 10px 0;  /* centra verticalmente dentro del header */
+header .lgx-logo {
+    padding: 10px 0 !important;  
 }
 
 /* Ajuste responsive para móviles */
 @media (max-width: 768px) {
-    .lgx-logo img {
-        height: 80px;  /* más pequeño en móviles */
+    header .lgx-logo a img {
+        height: 80px !important;  /* más pequeño en móviles */
     }
 }
+
+/* ==============================
+   Ocultar flecha toggle en escritorio
+   ============================== */
+@media (min-width: 992px) {
+    .navbar-toggle {
+        display: none !important;
+    }
+}
+
