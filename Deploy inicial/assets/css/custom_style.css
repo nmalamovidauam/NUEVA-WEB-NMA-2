@@ -129,3 +129,22 @@ button {
     font-style: normal;
 }
 
+/* ==============================
+   Logo en header – tamaño grande
+   ============================== */
+.lgx-logo img {
+    height: 120px;  /* ajusta la altura como quieras */
+    width: auto;    /* mantiene la proporción */
+    display: block;
+}
+
+.lgx-logo {
+    padding: 10px 0;  /* centra verticalmente dentro del header */
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+    .lgx-logo img {
+        height: 80px;  /* más pequeño en móviles */
+    }
+}
