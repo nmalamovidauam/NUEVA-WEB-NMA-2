@@ -130,25 +130,28 @@ button {
 }
 
 /* ==============================
-   Logo en header – tamaño grande y responsive
+   Header y Logo – tamaño grande y responsive
    ============================== */
-header .lgx-logo {
+header .lgx-header-position {
     display: flex;
-    align-items: center; /* centra verticalmente */
-    height: 100%;        /* ocupa toda la altura del header */
+    align-items: center;  /* centra verticalmente todo el header */
+    justify-content: flex-start; /* logo a la izquierda */
+}
+
+header .lgx-logo {
+    display: block;
     padding: 0 !important;
+    margin: 0 !important;
 }
 
 header .lgx-logo a {
-    display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
+    display: block;
 }
 
 header .lgx-logo a img {
     height: 110px !important;  /* tamaño ideal en escritorio */
     width: auto !important;
-    display: block !important;
+    display: block;
 }
 
 /* Ajuste responsive para móviles */
@@ -162,9 +165,18 @@ header .lgx-logo a img {
    Ocultar flecha toggle en escritorio
    ============================== */
 @media (min-width: 992px) {
-    button.navbar-toggle, 
-    .navbar-toggle {
+    .navbar-toggle,
+    button.navbar-toggle {
         display: none !important;
     }
+}
+
+/* ==============================
+   Asegurar que navbar no empuje logo
+   ============================== */
+.navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* logo a la izquierda */
 }
 
