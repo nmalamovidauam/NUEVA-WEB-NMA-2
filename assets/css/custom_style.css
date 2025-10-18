@@ -166,5 +166,6 @@ header .lgx-logo a img {
     .navbar-toggle {
         display: none !important;
         visibility: hidden !important;
+        visibility: hidden !important;
     }
 }
