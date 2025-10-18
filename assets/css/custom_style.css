@@ -132,23 +132,14 @@ button {
 /* ==============================
    Logo en header – tamaño grande y responsive
    ============================== */
-header .lgx-logo {
-    display: flex;
-    align-items: center; /* centra verticalmente */
-    height: 100%;        /* ocupa toda la altura del header */
-    padding: 0 !important;
-}
-
-header .lgx-logo a {
-    display: inline-block;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 header .lgx-logo a img {
-    height: 120px !important;  /* tamaño ideal en escritorio */
-    width: auto !important;
+    height: 110px !important;  /* tamaño ideal en escritorio */
+    width: auto !important;    
     display: block !important;
+}
+
+header .lgx-logo {
+    padding: 0px 0 !important;  
 }
 
 /* Ajuste responsive para móviles */
@@ -162,8 +153,8 @@ header .lgx-logo a img {
    Ocultar flecha toggle en escritorio
    ============================== */
 @media (min-width: 992px) {
-    button.navbar-toggle, 
     .navbar-toggle {
         display: none !important;
     }
 }
+
