@@ -134,7 +134,7 @@ button {
    ============================== */
 header .lgx-header-position {
     display: flex;
-    align-items: center;  /* centra verticalmente todo el header */
+    align-items: center;   /* centra verticalmente todo el header */
     justify-content: flex-start; /* logo a la izquierda */
 }
 
@@ -162,12 +162,13 @@ header .lgx-logo a img {
 }
 
 /* ==============================
-   Ocultar flecha toggle en escritorio
+   Ocultar toggle button completamente en escritorio
    ============================== */
 @media (min-width: 992px) {
     .navbar-toggle,
     button.navbar-toggle {
         display: none !important;
+        visibility: hidden !important;  /* asegura que no quede espacio */
     }
 }
 
@@ -178,5 +179,5 @@ header .lgx-logo a img {
     display: flex;
     align-items: center;
     justify-content: flex-start;  /* logo a la izquierda */
+    position: relative; /* evita que otros elementos se superpongan */
 }
-
