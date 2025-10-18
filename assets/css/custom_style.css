@@ -1,194 +1,160 @@
-/* ==============================
-   TABS / ITINERARIO
-   ============================== */
-.lgx-tab2 .nav-pills li a p{
-  font-size:1.4rem; line-height:2.1rem; font-weight:300; margin:0; color:#e0e0e0; opacity:.7;
-}
-.lgx-tab2 .nav-pills li.active a p{
-  font-size:1.4rem; line-height:2.1rem; font-weight:300; margin:0; color:#fff; opacity:.7;
-}
-.lgx-tab .nav-pills{ background:#ffffff00; }
+.lgx-tab2 .nav-pills li a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #e0e0e0; opacity: 0.7; } 
+.lgx-tab2 .nav-pills li.active a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #ffffff; opacity: 0.7; }
+.lgx-registration-area .recommended { background: #16a086; }
+.lgx-registration-area .lgx-single-registration .single-top .price { font-family: Poppins, sans-serif; color: rgb(255, 255, 255); font-size: 6.8rem; line-height: 8rem; font-weight: 900; }
+.lgx-banner-info-circle .info-circle-inner .date { margin-top: 0px; padding-top: 2.6rem; font-size: 16.6rem; line-height: 16rem; color: #ffffff; }
+.lgx-banner-info .subtitle { font-family: Poppins, sans-serif; font-size: 4rem; font-weight: 600; color: #16a086; margin: 0px; line-height: 7.2rem; }
+.lgx-banner-info-circle { background: linear-gradient(to top, #34495e 0px, #ec398b 100%); padding: 1.5rem; margin-right: 5rem; height: 420px; width: 420px; border-radius: 50%; }
+.lgx-schedule { background: #16a086; }
+.lgx-registration { background-color: #34495e; }
+.lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
+.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color:v #d80e8c; }
+.lgx-footer .lgx-inner-footer { background: #ec398b; }
 
-/* ==============================
-   TICKETS / REGISTRO
-   ============================== */
-.lgx-registration-area .recommended{ background:#16a086; }
-.lgx-registration-area .lgx-single-registration .single-top .price{
-  font-family:Poppins,sans-serif; color:#fff; font-size:6.8rem; line-height:8rem; font-weight:900;
-}
-.lgx-registration-area .lgx-single-registration .lgx-btn{ background:#34495e; }
-.lgx-registration{ background-color:#34495e; }
-/* corregía un typo "color:v" */
-.lgx-registration-area .recommended .single-top .price,
-.lgx-registration-area .recommended .single-top .title{ color:#d80e8c; }
-.vip-btn:hover{ background:#16a086 !important; }
-
-/* ==============================
-   BANNER / HERO
-   ============================== */
-/* Header fijo por encima del banner */
-.lgx-header-position-fixed{
-  position:fixed; top:0; left:0; right:0; z-index:1000;
-}
-/* Empuje general del body para que nada quede debajo del header.
-   Si no hay JS que calcule el alto, usa 80px por defecto. */
-body.home{ padding-top:var(--header-h, 80px); }
-
-/* Contenedor del banner al alto correcto y centrado */
-.lgx-banner .lgx-inner-fixed{
-  min-height:560px;
-  display:flex; align-items:center;
-}
-
-/* Disposición de círculo + texto (como plantilla original) */
-.lgx-banner-info-area{
-  display:flex; align-items:center; gap:38px;
+.single-bottom
+.lgx-btn,
+.lgx-submit,
+.wpcf7-submit,
+button {
+    overflow: hidden;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: 0;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    letter-spacing: .1rem;
+    color: #000000;
+    -moz-transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
+    -moz-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
+    box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4)
 }
 
-/* Círculo (marcador de fecha) */
-.lgx-banner-info-circle{
-  background:linear-gradient(to top, #34495e 0%, #ec398b 100%);
-  padding:1.5rem; margin-right:5rem; height:420px; width:420px; border-radius:50%;
-}
-.lgx-banner-info-circle .info-circle-inner{
-  background:rgba(255,255,255,.12);
-  width:100%; height:100%;
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center; color:#fff;
-}
-.lgx-banner-info-circle .info-circle-inner .date{
-  margin-top:0; padding-top:2.6rem; font-size:16.6rem; line-height:16rem; color:#fff;
+.lgx-tab .nav-pills {
+    background: #ffffff00;
 }
 
-/* Tipografía de subtítulo y título */
-.lgx-banner-info .subtitle{
-  font-family:Poppins,sans-serif; font-size:4rem; font-weight:600; color:#16a086;
-  margin:0; line-height:7.2rem;
-}
-.lgx-banner-info .title{
-  color:#fff !important; /* fuerza el blanco del H2 */
-  font-style:normal; text-transform:uppercase;
-}
-.lgx-banner-info .title span{ font-style:normal; }
-
-/* Ajustes de escalado responsivo */
-@media (max-width:1425px){
-  .lgx-banner-info .title{ font-size:5rem !important; }
-}
-@media (max-width:1199px){
-  .lgx-banner-info-circle .info-circle-inner{ margin-top:10%; }
-  .lgx-banner-info .title{ font-size:4.2rem !important; }
-}
-@media (max-width:991px){
-  .lgx-banner-info-circle .info-circle-inner{ margin-top:10%; }
-  .lgx-banner-info .title{ font-size:3rem !important; }
-}
-@media (max-width:740px){
-  .month-date{ margin-top:10%; }
-  .lgx-banner-info .title{ font-size:4rem !important; }
-}
-@media (max-width:461px){
-  .lgx-banner-info-circle .info-circle-inner{ margin-top:0; }
-  .month-date{ margin-top:4%; }
-  .lgx-banner-info-circle{ margin-right:0; width:90%; height:auto; }
-  .lgx-banner-info .title{ font-size:2rem !important; }
-  .lgx-banner-info .subtitle{ font-size:2rem; }
-}
-@media (max-width:324px){
-  .month-date > *{ font-size:3rem !important; }
-  .lgx-banner-info .title{ font-size:1.8rem !important; }
+@media (max-width: 1425px) {
+    .lgx-banner-info .title {
+        font-size: 5rem !important;
+    }
 }
 
-/* Posicionamiento del contador (si se usa) */
-.lgx-countdown-area{ margin-left:15px !important; margin-top:15px !important; }
-.lgx-days,.lgx-hr,.lgx-min,.lgx-sec{ margin-top:7px !important; }
-
-/* ==============================
-   SCHEDULE / BLOQUES TEMÁTICOS
-   ============================== */
-.lgx-schedule{ background:#16a086; }
-
-/* ==============================
-   BOTONES (normaliza selector roto)
-   ============================== */
-.single-bottom .lgx-btn,
-.lgx-btn, .lgx-submit, .wpcf7-submit, button{
-  overflow:hidden; border:none; text-align:center; cursor:pointer;
-  text-transform:uppercase; outline:0; position:relative;
-  font-weight:400; font-size:14px; margin:0 auto; padding:1.5rem 4rem;
-  display:inline-block; letter-spacing:.1rem; color:#000;
-  transition-duration:.3s;
-  box-shadow:0 8px 6px -6px rgba(50,51,51,.4);
+@media (max-width: 1199px) {
+    .lgx-banner-info-circle .info-circle-inner { 
+        margin-top: 10%;
+    }
+    .lgx-banner-info .title {
+        font-size: 4.2rem !important;
+    }
 }
 
-/* ==============================
-   LOGO HEADER
-   ============================== */
-header .lgx-logo a img{
-  height:110px !important; width:auto !important; display:block !important;
+@media (max-width: 991px) {
+    .lgx-banner-info-circle .info-circle-inner { 
+        margin-top: 10%;
+    }
+    .lgx-banner-info .title {
+        font-size: 3rem !important;
+    }
 }
-header .lgx-logo{ padding:10px 0 !important; }
-@media (max-width:768px){
-  header .lgx-logo a img{ height:80px !important; }
+
+@media (max-width: 740px) {
+    .month-date{ 
+        margin-top: 10%;
+    }
+    .lgx-banner-info .title {
+        font-size: 4rem !important;
+    }
 }
-/* Ocultar burger en escritorio */
-@media (min-width:992px){
-  .navbar-toggle{ display:none !important; }
+
+.vip-btn:hover {
+        background: #16a086 !important
+}
+
+@media (max-width: 461px) {
+    .lgx-banner-info-circle .info-circle-inner { 
+        margin-top: 0%;
+    }
+    .month-date{ 
+        margin-top: 4%;
+    }
+    .lgx-banner-info-circle{
+        margin-right: 0px;
+        width: 90%;
+        height: fit-content;
+    }
+    .lgx-banner-info .title { font-size: 2rem !important; }
+    .lgx-banner-info .subtitle { font-size: 2rem; }
+}
+
+@media (max-width: 324px) {
+    .month-date > * { 
+        font-size: 3rem !important;
+    }
+
+    .lgx-banner-info .title {
+        font-size: 1.8rem !important;
+    }
+}
+
+.lgx-countdown-area {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+}
+
+.lgx-days {
+    margin-top: 7px !important;
+}
+.lgx-hr {
+    margin-top: 7px !important;
+}
+.lgx-min {
+    margin-top: 7px !important;
+}
+.lgx-sec {
+    margin-top: 7px !important;
+}
+
+
+.lgx-banner-info .title span {
+    font-style: normal;
 }
 
 /* ==============================
-   FOOTER (mock morado con suscripción)
+   Logo en header – tamaño grande y responsive
    ============================== */
-.nma-footer-bg{
-  background:linear-gradient(180deg, #6b57c9 0%, #6b57c9 40%, #644fc4 100%);
-  color:#fff; padding-top:40px; padding-bottom:30px;
-}
-/* (Si quedaba el fondo antiguo, lo neutralizamos) */
-.lgx-footer .lgx-inner-footer{ background:transparent; }
-
-/* Suscripción */
-.lgx-subscriber-inner .subscriber-title{
-  text-align:center; font-weight:700; letter-spacing:.5px;
-  margin-bottom:18px; text-transform:uppercase;
-}
-.lgx-subscribe-form{
-  display:flex; gap:0; justify-content:center; align-items:stretch;
-  max-width:720px; margin:0 auto 40px auto;
-}
-.lgx-subscribe-form .form-group-email{ flex:1 1 auto; }
-.lgx-input-form{
-  height:48px; border:none; border-radius:2px 0 0 2px; box-shadow:none;
-}
-.lgx-submit{
-  height:48px; border:none; border-radius:0 2px 2px 0;
-  background:#23b088; color:#fff; font-weight:700; padding:0 22px;
-}
-.lgx-submit:focus, .lgx-submit:hover{ filter:brightness(1.05); outline:none; }
-.lgx-subscribe-form input:focus{ outline:2px solid rgba(255,255,255,.35); }
-
-/* Cuerpo del footer (3 columnas) */
-.lgx-footer-area{
-  display:flex; align-items:flex-start; justify-content:space-between;
-  gap:32px; flex-wrap:wrap; padding:20px 0 10px 0;
-}
-.lgx-footer-single .footer-title{
-  color:#fff; text-transform:uppercase; letter-spacing:.4px; margin-bottom:8px;
-}
-.nma-accent{ color:#16AD86; }
-.lgx-social-footer i{ font-size:18px; }
-
-/* Divider + copyright */
-.nma-footer-divider{
-  border:0; border-top:1px solid rgba(255,255,255,.15);
-  margin:24px 0 6px 0;
-}
-.lgx-footer-bottom{
-  text-align:center; color:#f6f3ff; opacity:.9; padding-bottom:8px;
+header .lgx-logo a img {
+    height: 110px !important;  /* tamaño ideal en escritorio */
+    width: auto !important;    
+    display: block !important;
 }
 
-/* Responsive footer */
-@media (max-width:768px){
-  .lgx-subscribe-form{ max-width:100%; padding:0 16px; }
-  .lgx-footer-area{ flex-direction:column; gap:18px; }
-  .lgx-footer-single .logo img{ height:42px; }
+header .lgx-logo {
+    padding: 0px 0 !important;  
+    padding: 10px 0 !important;  
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+    header .lgx-logo a img {
+        height: 80px !important;  /* más pequeño en móviles */
+    }
+}
+
+/* ==============================
+   Ocultar flecha toggle en escritorio
+   ============================== */
+@media (min-width: 992px) {
+    .navbar-toggle {
+        display: none !important;
+    }
 }
