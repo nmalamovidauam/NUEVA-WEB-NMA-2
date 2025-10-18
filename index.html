@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
     <title>NMA – Nuestro mundo que se avecina</title>
     <meta name="description" content="NMA busca ser el ágora desde el cual empezar a construir el futuro, partiendo del análisis de las problemáticas actuales"/>
 
@@ -35,6 +34,82 @@
                 font-size: 4rem !important;
             }
         }
+
+        /* Footer estilo morado */
+        .nma-footer-bg{
+          background: linear-gradient(180deg, #6b57c9 0%, #644fc4 100%);
+          color:#fff;
+          padding-top:40px;
+          padding-bottom:30px;
+        }
+        .lgx-subscriber-inner .subscriber-title{
+          text-align:center;
+          font-weight:700;
+          letter-spacing:.5px;
+          margin-bottom:18px;
+          text-transform:uppercase;
+        }
+        .lgx-subscribe-form{
+          display:flex;
+          gap:0;
+          justify-content:center;
+          align-items:stretch;
+          max-width:720px;
+          margin:0 auto 40px auto;
+        }
+        .lgx-subscribe-form .form-group-email{
+          flex:1 1 auto;
+        }
+        .lgx-input-form{
+          height:48px;
+          border:none;
+          border-radius:2px 0 0 2px;
+          box-shadow:none;
+        }
+        .lgx-submit{
+          height:48px;
+          border:none;
+          border-radius:0 2px 2px 0;
+          background:#23b088;
+          color:#fff;
+          font-weight:700;
+          padding:0 22px;
+        }
+        .lgx-footer-area{
+          display:flex;
+          align-items:flex-start;
+          justify-content:space-between;
+          gap:32px;
+          flex-wrap:wrap;
+          padding:20px 0 10px 0;
+        }
+        .lgx-footer-single .footer-title{
+          color:#fff;
+          text-transform:uppercase;
+          letter-spacing:.4px;
+          margin-bottom:8px;
+        }
+        .nma-accent{ color:#16AD86; }
+        .lgx-social-footer i{ font-size:18px; }
+        .nma-footer-divider{
+          border:0;
+          border-top:1px solid rgba(255,255,255,.15);
+          margin:24px 0 6px 0;
+        }
+        .lgx-footer-bottom{
+          text-align:center;
+          color:#f6f3ff;
+          opacity:.9;
+          padding-bottom:8px;
+        }
+        .lgx-submit:focus,
+        .lgx-submit:hover{ filter:brightness(1.05); outline:none; }
+        .lgx-subscribe-form input:focus{ outline:2px solid rgba(255,255,255,.35); }
+        @media (max-width: 768px){
+          .lgx-subscribe-form{ max-width:100%; padding:0 16px; }
+          .lgx-footer-area{ flex-direction:column; gap:18px; }
+          .lgx-footer-single .logo img{ height:42px; }
+        }
     </style>
 </head>
 
@@ -61,10 +136,9 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <div class="lgx-logo">
-                                    <<a href="#home" class="lgx-scroll">
-                                        <img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA" style="height: 55px; width: auto; vertical-align: middle;">
+                                    <a href="#home" class="lgx-scroll">
+                                        <img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA" style="height:55px;width:auto;vertical-align:middle;">
                                     </a>
-                                    
                                 </div>
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
@@ -122,7 +196,6 @@
 
         <!-- MAIN CONTENT -->
         <main>
-
             <!-- Ponencias Pasadas -->
             <section id="ponencias-pasadas" class="lgx-section">
                 <div class="container">
@@ -152,7 +225,6 @@
                     </a>
                 </div>
             </section>
-
         </main>
 
         <!-- SPONSORS -->
@@ -166,51 +238,128 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section id="footer" class="lgx-section">
-            <div class="container">
-                <h2><span lang="es">Contacto</span><span lang="en">Contact</span></h2>
-                <form id="contact-form">
-                    <div class="form-group"><input type="text" class="form-control" placeholder="Nombre / Name" required></div>
-                    <div class="form-group"><input type="email" class="form-control" placeholder="Correo / Email" required></div>
-                    <div class="form-group"><textarea class="form-control" placeholder="Mensaje / Message" required></textarea></div>
-                    <button type="submit" class="lgx-btn lgx-btn-primary">
-                        <span lang="es">Enviar</span><span lang="en">Send</span>
-                    </button>
-                </form>
+        <!-- FOOTER -->
+        <footer id="footer">
+          <div id="lgx-footer" class="lgx-footer">
+            <div class="lgx-inner-footer nma-footer-bg">
+              <div class="lgx-subscriber-area">
+                <div class="container">
+                  <div class="lgx-subscriber-inner">
+                    <h3 class="subscriber-title">
+                      <span lang="es">ÚNETE PARA RECIBIR NOTICIAS</span>
+                      <span lang="en">JOIN TO RECEIVE NEWS</span>
+                    </h3>
+                    <form class="lgx-subscribe-form" id="subscribe-form" action="#" method="post" novalidate>
+                      <div class="form-group form-group-email">
+                        <label for="subscribe" class="sr-only">Email</label>
+                        <input type="email" id="subscribe" name="email"
+                               placeholder="Enter your email Address  ..." 
+                               class="form-control lgx-input-form" required />
+                      </div>
+                      <div class="form-group form-group-submit">
+                        <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit">
+                          <span>
+                            <span lang="es">Subscribirse</span>
+                            <span lang="en">Subscribe</span>
+                          </span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="lgx-footer-area">
+                  <div class="lgx-footer-single">
+                    <a class="logo" href="#home">
+                      <img src="assets/img/NMA LOGO Blanco.png" alt="NMA" style="height:48px;width:auto;">
+                    </a>
+                  </div>
+                  <div class="lgx-footer-single">
+                    <h3 class="footer-title">
+                      <span lang="es">Ubicación</span><span lang="en">Location</span>
+                    </h3>
+                    <h4 class="date nma-accent">
+                      <span lang="es">Próximas fechas</span>
+                      <span lang="en">Upcoming dates</span>
+                    </h4>
+                    <address>
+                      <span lang="es">España</span>
+                      <span lang="en">Spain</span>
+                    </address>
+                    <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> View Map location
+                    </a>
+                  </div>
+                  <div class="lgx-footer-single">
+                    <h3 class="footer-title"><span lang="es">Redes Sociales</span><span lang="en">Social Media</span></h3>
+                    <p class="text">
+                      <span lang="es">Visita nuestras redes sociales<br> para tener más información</span>
+                      <span lang="en">Visit our social media<br> for more information</span>
+                    </p>
+                    <ul class="list-inline lgx-social-footer">
+                      <li><a href="https://twitter.com/NMA_Encuentro?s=20&t=2r5OyFwV4POOvH7iV25NEw" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="https://www.instagram.com/nmapamplona/" target="_blank" rel="noopener"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <p class="text">nmapamplona@gmail.com</p>
+                  </div>
+                </div>
+                <hr class="nma-footer-divider">
+                <div class="lgx-footer-bottom">
+                  <div class="lgx-copyright">
+                    <p>
+                      <span>©</span> <span id="nma-year"></span> NMA
+                      <span lang="es">Todos los derechos reservados</span>
+                      <span lang="en">All rights reserved</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="lgx-modal-map" class="modal fade lgx-modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="lgxmapcanvas map-canvas-default" id="map_canvas"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+        </footer>
+
+        <!-- MODALES PAST/FUTURE -->
+        <div class="modal fade" id="modal-pasadas" tabindex="-1" role="dialog" aria-labelledby="modalPasadasLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalPasadasLabel">Ponencias Pasadas</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p><span lang="es">Actualmente en preparación</span><span lang="en">Currently in preparation</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal-futuras" tabindex="-1" role="dialog" aria-labelledby="modalFuturasLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalFuturasLabel">Ponencias Futuras</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p><span lang="es">Actualmente en preparación</span><span lang="en">Currently in preparation</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </div> <!-- END SITE CONTAINER -->
-
-    <!-- MODALES -->
-    <div class="modal fade" id="modal-pasadas" tabindex="-1" role="dialog" aria-labelledby="modalPasadasLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalPasadasLabel">Ponencias Pasadas</h5>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <p><span lang="es">Actualmente en preparación</span><span lang="en">Currently in preparation</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="modal-futuras" tabindex="-1" role="dialog" aria-labelledby="modalFuturasLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalFuturasLabel">Ponencias Futuras</h5>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <p><span lang="es">Actualmente en preparación</span><span lang="en">Currently in preparation</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- SCRIPTS -->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -222,17 +371,8 @@
     <script src="assets/libs/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/libs/countdown.js"></script>
     <script src="assets/libs/timer/TimeCircles.js"></script>
-    <script src="assets/libs/waypoints.min.js"></script>
-    <script src="assets/libs/counterup/jquery.counterup.min.js"></script>
-    <script src="assets/libs/typed/typed.min.js"></script>
-    <script src="assets/libs/header-parallax.js"></script>
-    <script src="assets/libs/instafeed.min.js"></script>
-    <script src="assets/js/custom.script.js"></script>
-    <script src="assets/js/popup.js"></script>
-    <script src="assets/js/language.script.js"></script>
+   
 
-</body>
-</html>
 
     
   
