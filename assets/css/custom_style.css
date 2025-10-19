@@ -8,14 +8,11 @@
 .lgx-schedule { background: #16a086; }
 .lgx-registration { background-color: #34495e; }
 .lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
-.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color:v #d80e8c; }
+.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
 .lgx-footer .lgx-inner-footer { background: #ec398b; }
 
-.single-bottom
-.lgx-btn,
-.lgx-submit,
-.wpcf7-submit,
-button {
+/* Botones generales */
+.single-bottom, .lgx-btn, .lgx-submit, .wpcf7-submit, button {
     overflow: hidden;
     border: none;
     text-align: center;
@@ -36,13 +33,69 @@ button {
     transition-duration: .3s;
     -webkit-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
     -moz-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
-    box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4)
+    box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
 }
 
-.lgx-tab .nav-pills {
-    background: #ffffff00;
+.vip-btn:hover {
+    background: #16a086 !important;
 }
 
+/* Countdown */
+.lgx-countdown-area {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+}
+
+.lgx-days, .lgx-hr, .lgx-min, .lgx-sec {
+    margin-top: 7px !important;
+}
+
+.lgx-banner-info .title span {
+    font-style: normal;
+}
+
+/* Logo y header */
+.lgx-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+}
+
+.lgx-logo img {
+    height: auto;
+    width: auto;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.lgx-header.sticky .lgx-logo img {
+    max-height: 70px;
+    height: auto;
+    width: auto;
+    transform: none !important;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    transition: height 0.3s ease;
+}
+
+.lgx-header.sticky .navbar-header {
+    height: 70px;
+}
+
+.navbar-toggle {
+    margin-top: 0;
+}
+
+/* Media queries */
 @media (max-width: 1425px) {
     .lgx-banner-info .title {
         font-size: 5rem !important;
@@ -51,100 +104,69 @@ button {
 
 @media (max-width: 1199px) {
     .lgx-banner-info-circle .info-circle-inner { 
-        margin-top: 10%;
+        margin-top: 10%; 
     }
-    .lgx-banner-info .title {
-        font-size: 4.2rem !important;
+    .lgx-banner-info .title { 
+        font-size: 4.2rem !important; 
     }
 }
 
 @media (max-width: 991px) {
     .lgx-banner-info-circle .info-circle-inner { 
-        margin-top: 10%;
+        margin-top: 10%; 
     }
-    .lgx-banner-info .title {
-        font-size: 3rem !important;
+    .lgx-banner-info .title { 
+        font-size: 3rem !important; 
+    }
+}
+
+@media (max-width: 768px) {
+    .lgx-logo img { 
+        max-height: 80px; 
+    }
+    .navbar-header { 
+        height: 60px; 
+    }
+    .lgx-header.sticky .navbar-header { 
+        height: 50px; 
     }
 }
 
 @media (max-width: 740px) {
-    .month-date{ 
-        margin-top: 10%;
+    .month-date { 
+        margin-top: 10%; 
     }
-    .lgx-banner-info .title {
-        font-size: 4rem !important;
+    .lgx-banner-info .title { 
+        font-size: 4rem !important; 
     }
-}
-
-.vip-btn:hover {
-        background: #16a086 !important
 }
 
 @media (max-width: 461px) {
     .lgx-banner-info-circle .info-circle-inner { 
-        margin-top: 0%;
+        margin-top: 0%; 
     }
-    .month-date{ 
-        margin-top: 4%;
+    .month-date { 
+        margin-top: 4%; 
     }
-    .lgx-banner-info-circle{
+    .lgx-banner-info-circle {
         margin-right: 0px;
         width: 90%;
         height: fit-content;
     }
-    .lgx-banner-info .title { font-size: 2rem !important; }
-    .lgx-banner-info .subtitle { font-size: 2rem; }
+    .lgx-banner-info .title { 
+        font-size: 2rem !important; 
+    }
+    .lgx-banner-info .subtitle { 
+        font-size: 2rem; 
+    }
 }
 
 @media (max-width: 324px) {
     .month-date > * { 
-        font-size: 3rem !important;
+        font-size: 3rem !important; 
     }
-
-    .lgx-banner-info .title {
-        font-size: 1.8rem !important;
-    }
-}
-
-.lgx-countdown-area {
-    margin-left: 15px !important;
-    margin-top: 15px !important;
-}
-
-.lgx-days {
-    margin-top: 7px !important;
-}
-.lgx-hr {
-    margin-top: 7px !important;
-}
-.lgx-min {
-    margin-top: 7px !important;
-}
-.lgx-sec {
-    margin-top: 7px !important;
-}
-
-
-.lgx-banner-info .title span {
-    font-style: normal;
-}
-
-/* ==============================
-   Logo en header – tamaño grande
-   ============================== */
-.lgx-logo img {
-    height: 120px;  /* ajusta la altura como quieras */
-    width: auto;    /* mantiene la proporción */
-    display: block;
-}
-
-.lgx-logo {
-    padding: 10px 0;  /* centra verticalmente dentro del header */
-}
-
-/* Ajuste responsive para móviles */
-@media (max-width: 768px) {
-    .lgx-logo img {
-        height: 80px;  /* más pequeño en móviles */
+    .lgx-banner-info .title { 
+        font-size: 1.8rem !important; 
     }
 }
+
