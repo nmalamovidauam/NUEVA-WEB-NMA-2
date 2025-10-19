@@ -155,7 +155,9 @@ header .lgx-logo {
    ============================== */
 @media (min-width: 992px) {
     .navbar-toggle,
-    .navbar-toggle.collapsed {
+    .navbar-toggle.collapsed,
+    button.navbar-toggle,
+    button.navbar-toggle.collapsed {
         display: none !important;
         visibility: hidden !important;
     }
