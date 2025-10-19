@@ -154,7 +154,9 @@ header .lgx-logo {
    Ocultar flecha toggle en escritorio
    ============================== */
 @media (min-width: 992px) {
-    .navbar-toggle {
+    .navbar-toggle,
+    .navbar-toggle.collapsed {
         display: none !important;
+        visibility: hidden !important;
     }
 }
