@@ -157,7 +157,13 @@ header .lgx-logo {
     .navbar-toggle,
     .navbar-toggle.collapsed,
     button.navbar-toggle,
-    button.navbar-toggle.collapsed {
+    button.navbar-toggle.collapsed,
+    nav .navbar-toggle,
+    nav .navbar-toggle.collapsed,
+    header .navbar-toggle,
+    header .navbar-toggle.collapsed,
+    .lgx-header .navbar-toggle,
+    .lgx-header .navbar-toggle.collapsed {
         display: none !important;
         visibility: hidden !important;
     }
