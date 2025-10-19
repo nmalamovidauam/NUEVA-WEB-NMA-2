@@ -199,3 +199,85 @@ header .lgx-logo a img {
         visibility: hidden !important;
     }
 }
+
+/* ==============================
+   Logo en header – tamaño grande y responsive
+   ============================== */
+header .lgx-logo {
+    padding: 10px 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+header .lgx-logo a img {
+    height: 110px !important;  /* tamaño ideal en escritorio */
+    width: auto !important;
+    display: block !important;
+    margin: 0 auto;
+}
+
+/* Logo alineado a la izquierda en escritorio */
+@media (min-width: 992px) {
+    header .lgx-logo {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        width: auto;
+    }
+}
+/* Logo centrado y más pequeño en móviles */
+@media (max-width: 991px) {
+    header .lgx-logo {
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100%;
+    }
+    header .lgx-logo a img {
+        height: 80px !important;  /* más pequeño en móviles */
+    }
+}
+
+/* ==============================
+   Ajusta espacio entre logo y menú
+   ============================== */
+.navbar-header {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espacio entre logo y toggle/menu */
+}
+
+.lgx-navbar .navbar-nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.lgx-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ==============================
+   Ocultar flecha toggle en escritorio
+   ============================== */
+@media (min-width: 992px) {
+    .navbar-toggle,
+    .navbar-toggle.collapsed,
+    button.navbar-toggle,
+    button.navbar-toggle.collapsed,
+    nav .navbar-toggle,
+    nav .navbar-toggle.collapsed,
+    header .navbar-toggle,
+    header .navbar-toggle.collapsed,
+    .lgx-header .navbar-toggle,
+    .lgx-header .navbar-toggle.collapsed {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
