@@ -35,6 +35,13 @@
                 font-size: 4rem !important;
             }
         }
+
+        /* Sticky header styles */
+        .sticky {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
@@ -231,20 +238,17 @@
     <script src="assets/js/language.script.js"></script>
 
     <!-- Sticky header JS -->
-<script>
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.lgx-header-position-fixed');
-    if (window.scrollY > 50) { // distancia para activar sticky
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
-});
-</script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.lgx-header-position-fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
     
 </body>
 </html>
 
-    
-  
-  
