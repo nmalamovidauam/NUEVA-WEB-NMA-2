@@ -8,7 +8,7 @@
 .lgx-schedule { background: #16a086; }
 .lgx-registration { background-color: #34495e; }
 .lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
-.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color:v #d80e8c; }
+.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
 .lgx-footer .lgx-inner-footer { background: #ec398b; }
 
 .single-bottom
@@ -77,7 +77,7 @@ button {
 }
 
 .vip-btn:hover {
-        background: #16a086 !important
+    background: #16a086 !important
 }
 
 @media (max-width: 461px) {
@@ -100,7 +100,6 @@ button {
     .month-date > * { 
         font-size: 3rem !important;
     }
-
     .lgx-banner-info .title {
         font-size: 1.8rem !important;
     }
@@ -111,19 +110,9 @@ button {
     margin-top: 15px !important;
 }
 
-.lgx-days {
+.lgx-days, .lgx-hr, .lgx-min, .lgx-sec {
     margin-top: 7px !important;
 }
-.lgx-hr {
-    margin-top: 7px !important;
-}
-.lgx-min {
-    margin-top: 7px !important;
-}
-.lgx-sec {
-    margin-top: 7px !important;
-}
-
 
 .lgx-banner-info .title span {
     font-style: normal;
@@ -132,22 +121,64 @@ button {
 /* ==============================
    Logo en header – tamaño grande y responsive
    ============================== */
+header .lgx-logo {
+    padding: 10px 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
 header .lgx-logo a img {
     height: 110px !important;  /* tamaño ideal en escritorio */
-    width: auto !important;    
+    width: auto !important;
     display: block !important;
+    margin: 0 auto;
 }
 
-header .lgx-logo {
-    padding: 0px 0 !important;  
-    padding: 10px 0 !important;  
+/* Logo alineado a la izquierda en escritorio */
+@media (min-width: 992px) {
+    header .lgx-logo {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        width: auto;
+    }
 }
-
-/* Ajuste responsive para móviles */
-@media (max-width: 768px) {
+/* Logo centrado y más pequeño en móviles */
+@media (max-width: 991px) {
+    header .lgx-logo {
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100%;
+    }
     header .lgx-logo a img {
         height: 80px !important;  /* más pequeño en móviles */
     }
+}
+
+/* ==============================
+   Ajusta espacio entre logo y menú
+   ============================== */
+.navbar-header {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espacio entre logo y toggle/menu */
+}
+
+.lgx-navbar .navbar-nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.lgx-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* ==============================
