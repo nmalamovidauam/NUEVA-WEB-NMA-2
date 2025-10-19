@@ -1,17 +1,95 @@
-.lgx-tab2 .nav-pills li a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #e0e0e0; opacity: 0.7; } 
-.lgx-tab2 .nav-pills li.active a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #ffffff; opacity: 0.7; }
-.lgx-registration-area .recommended { background: #16a086; }
-.lgx-registration-area .lgx-single-registration .single-top .price { font-family: Poppins, sans-serif; color: rgb(255, 255, 255); font-size: 6.8rem; line-height: 8rem; font-weight: 900; }
-.lgx-banner-info-circle .info-circle-inner .date { margin-top: 0px; padding-top: 2.6rem; font-size: 16.6rem; line-height: 16rem; color: #ffffff; }
-.lgx-banner-info .subtitle { font-family: Poppins, sans-serif; font-size: 4rem; font-weight: 600; color: #16a086; margin: 0px; line-height: 7.2rem; }
-.lgx-banner-info-circle { background: linear-gradient(to top, #34495e 0px, #ec398b 100%); padding: 1.5rem; margin-right: 5rem; height: 420px; width: 420px; border-radius: 50%; }
-.lgx-schedule { background: #16a086; }
-.lgx-registration { background-color: #34495e; }
-.lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
-.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
-.lgx-footer .lgx-inner-footer { background: #ec398b; }
+/* ==============================
+   Tabs y textos
+   ============================== */
+.lgx-tab2 .nav-pills li a p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    margin: 0;
+    color: #e0e0e0;
+    opacity: 0.7;
+}
 
-/* Botones generales */
+.lgx-tab2 .nav-pills li.active a p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    margin: 0;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+/* ==============================
+   Registro / Pricing
+   ============================== */
+.lgx-registration-area .recommended {
+    background: #16a086;
+}
+
+.lgx-registration-area .lgx-single-registration .single-top .price {
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    font-size: 6.8rem;
+    line-height: 8rem;
+    font-weight: 900;
+}
+
+.lgx-registration-area .recommended .single-top .price,
+.lgx-registration-area .recommended .single-top .title {
+    color: #d80e8c;
+}
+
+.lgx-registration-area .lgx-single-registration .lgx-btn {
+    background: #34495e;
+}
+
+.lgx-registration {
+    background-color: #34495e;
+}
+
+/* ==============================
+   Banner
+   ============================== */
+.lgx-banner-info-circle {
+    background: linear-gradient(to top, #34495e 0%, #ec398b 100%);
+    padding: 1.5rem;
+    margin-right: 5rem;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+}
+
+.lgx-banner-info-circle .info-circle-inner .date {
+    margin-top: 0;
+    padding-top: 2.6rem;
+    font-size: 16.6rem;
+    line-height: 16rem;
+    color: #fff;
+}
+
+.lgx-banner-info .subtitle {
+    font-family: Poppins, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #16a086;
+    margin: 0;
+    line-height: 7.2rem;
+}
+
+.lgx-banner-info .title span {
+    font-style: normal;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+.lgx-footer .lgx-inner-footer {
+    background: #ec398b;
+}
+
+/* ==============================
+   Botones generales
+   ============================== */
 .single-bottom, .lgx-btn, .lgx-submit, .wpcf7-submit, button {
     overflow: hidden;
     border: none;
@@ -25,22 +103,19 @@
     margin: 0 auto;
     padding: 1.5rem 4rem;
     display: inline-block;
-    letter-spacing: .1rem;
-    color: #000000;
-    -moz-transition-duration: .3s;
-    -webkit-transition-duration: .3s;
-    -o-transition-duration: .3s;
-    transition-duration: .3s;
-    -webkit-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
-    -moz-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
-    box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
+    letter-spacing: 0.1rem;
+    color: #000;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 6px -6px rgba(50, 51, 51, 0.4);
 }
 
 .vip-btn:hover {
     background: #16a086 !important;
 }
 
-/* Countdown */
+/* ==============================
+   Countdown
+   ============================== */
 .lgx-countdown-area {
     margin-left: 15px !important;
     margin-top: 15px !important;
@@ -50,27 +125,25 @@
     margin-top: 7px !important;
 }
 
-.lgx-banner-info .title span {
-    font-style: normal;
-}
-
-/*Logo y header*/
+/* ==============================
+   Sticky Header / Logo
+   ============================== */
 .lgx-header-position-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #ffffff; /* color de la barra normal */
+    background: #fff;
     transition: all 0.3s ease;
     display: flex;
-    align-items: center; /* centra verticalmente */
+    align-items: center;
 }
 
 .lgx-navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    justify-content: space-between;
     width: 100%;
     padding: 0 20px;
 }
@@ -78,45 +151,46 @@
 .navbar-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* logo a la izquierda */
-    height: 100px; /* altura del header normal */
-    padding: 0 15px; /* espacio lateral */
+    justify-content: flex-start;
+    height: 100px;
+    padding: 0 15px;
     transition: height 0.3s ease, padding 0.3s ease;
 }
 
 .lgx-header.sticky .navbar-header {
-    height: 70px; /* altura cuando se hace scroll */
+    height: 70px;
     padding: 0 15px;
 }
 
 .lgx-logo {
     display: flex;
-    align-items: center; /* centra verticalmente */
-    justify-content: flex-start; /* logo alineado a la izquierda */
+    align-items: center;
+    justify-content: flex-start;
     height: 100%;
     padding: 0;
 }
 
 .lgx-logo img {
-    max-height: 120px; /* tamaño normal */
+    max-height: 120px;
     height: auto;
     width: auto;
     object-fit: contain;
     display: block;
+    transition: max-height 0.3s ease;
 }
 
 .lgx-header.sticky .lgx-logo img {
-    max-height: 70px; /* tamaño reducido al hacer scroll */
+    max-height: 70px;
 }
 
 .navbar-toggle {
     margin: 0;
     display: flex;
-    align-items: center; /* toggle centrado verticalmente */
+    align-items: center;
 }
 
 /* ==============================
-   Media queries (responsive)
+   Media Queries
    ============================== */
 @media (max-width: 768px) {
     .lgx-logo img { max-height: 80px; }
