@@ -1,90 +1,17 @@
-/* ==============================
-   Tabs y textos
-   ============================== */
-.lgx-tab2 .nav-pills li a p {
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    font-weight: 300;
-    margin: 0px;
-    color: #e0e0e0;
-    opacity: 0.7;
-}
-.lgx-tab2 .nav-pills li.active a p {
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    font-weight: 300;
-    margin: 0px;
-    color: #ffffff;
-    opacity: 0.7;
-}
+.lgx-tab2 .nav-pills li a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #e0e0e0; opacity: 0.7; } 
+.lgx-tab2 .nav-pills li.active a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #ffffff; opacity: 0.7; }
+.lgx-registration-area .recommended { background: #16a086; }
+.lgx-registration-area .lgx-single-registration .single-top .price { font-family: Poppins, sans-serif; color: rgb(255, 255, 255); font-size: 6.8rem; line-height: 8rem; font-weight: 900; }
+.lgx-banner-info-circle .info-circle-inner .date { margin-top: 0px; padding-top: 2.6rem; font-size: 16.6rem; line-height: 16rem; color: #ffffff; }
+.lgx-banner-info .subtitle { font-family: Poppins, sans-serif; font-size: 4rem; font-weight: 600; color: #16a086; margin: 0px; line-height: 7.2rem; }
+.lgx-banner-info-circle { background: linear-gradient(to top, #34495e 0px, #ec398b 100%); padding: 1.5rem; margin-right: 5rem; height: 420px; width: 420px; border-radius: 50%; }
+.lgx-schedule { background: #16a086; }
+.lgx-registration { background-color: #34495e; }
+.lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
+.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
+.lgx-footer .lgx-inner-footer { background: #ec398b; }
 
-/* ==============================
-   Registro y precios
-   ============================== */
-.lgx-registration-area .recommended {
-    background: #16a086;
-}
-.lgx-registration-area .lgx-single-registration .single-top .price {
-    font-family: Poppins, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 6.8rem;
-    line-height: 8rem;
-    font-weight: 900;
-}
-.lgx-registration-area .lgx-single-registration .lgx-btn {
-    background: rgb(52, 73, 94);
-}
-.lgx-registration-area .recommended .single-top .price,
-.lgx-registration-area .recommended .single-top .title {
-    color: #d80e8c;
-}
-
-/* ==============================
-   Banner
-   ============================== */
-.lgx-banner-info-circle {
-    background: linear-gradient(to top, #34495e 0px, #ec398b 100%);
-    padding: 1.5rem;
-    margin-right: 5rem;
-    height: 420px;
-    width: 420px;
-    border-radius: 50%;
-}
-.lgx-banner-info-circle .info-circle-inner .date {
-    margin-top: 0px;
-    padding-top: 2.6rem;
-    font-size: 16.6rem;
-    line-height: 16rem;
-    color: #ffffff;
-}
-.lgx-banner-info .subtitle {
-    font-family: Poppins, sans-serif;
-    font-size: 4rem;
-    font-weight: 600;
-    color: #16a086;
-    margin: 0px;
-    line-height: 7.2rem;
-}
-.lgx-banner-info .title span {
-    font-style: normal;
-}
-
-/* ==============================
-   Schedule y footer
-   ============================== */
-.lgx-schedule {
-    background: #16a086;
-}
-.lgx-registration {
-    background-color: #34495e;
-}
-.lgx-footer .lgx-inner-footer {
-    background: #ec398b;
-}
-
-/* ==============================
-   Botones generales
-   ============================== */
+/* Botones generales */
 .single-bottom, .lgx-btn, .lgx-submit, .wpcf7-submit, button {
     overflow: hidden;
     border: none;
@@ -108,46 +35,42 @@
     -moz-box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
     box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
 }
+
 .vip-btn:hover {
     background: #16a086 !important;
 }
 
-/* ==============================
-   Countdown
-   ============================== */
+/* Countdown */
 .lgx-countdown-area {
     margin-left: 15px !important;
     margin-top: 15px !important;
 }
+
 .lgx-days, .lgx-hr, .lgx-min, .lgx-sec {
     margin-top: 7px !important;
 }
 
-/* ==============================
-   Logo y header
-   ============================== */
+.lgx-banner-info .title span {
+    font-style: normal;
+}
+
+/*Logo y header*/
 .lgx-header-position-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #ffffff;
+    background: #ffffff; /* color de la barra normal */
     transition: all 0.3s ease;
     display: flex;
-    align-items: center;
-    box-shadow: none;
-}
-
-.lgx-header.sticky {
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    align-items: center; /* centra verticalmente */
 }
 
 .lgx-navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
     width: 100%;
     padding: 0 20px;
 }
@@ -155,51 +78,41 @@
 .navbar-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    height: 100px;
-    padding: 0 15px;
+    justify-content: flex-start; /* logo a la izquierda */
+    height: 100px; /* altura del header normal */
+    padding: 0 15px; /* espacio lateral */
     transition: height 0.3s ease, padding 0.3s ease;
 }
 
 .lgx-header.sticky .navbar-header {
-    height: 70px;
+    height: 70px; /* altura cuando se hace scroll */
     padding: 0 15px;
 }
 
 .lgx-logo {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; /* centra verticalmente */
+    justify-content: flex-start; /* logo alineado a la izquierda */
     height: 100%;
     padding: 0;
-    transition: max-height 0.3s ease;
 }
 
 .lgx-logo img {
-    max-height: 120px;
+    max-height: 120px; /* tamaño normal */
     height: auto;
     width: auto;
     object-fit: contain;
     display: block;
-    transition: max-height 0.3s ease;
 }
 
 .lgx-header.sticky .lgx-logo img {
-    max-height: 70px;
+    max-height: 70px; /* tamaño reducido al hacer scroll */
 }
 
 .navbar-toggle {
     margin: 0;
     display: flex;
-    align-items: center;
-}
-
-/* ==============================
-   Menú activo
-   ============================== */
-.lgx-nav li.active a {
-    color: #16a086;
-    font-weight: 600;
+    align-items: center; /* toggle centrado verticalmente */
 }
 
 /* ==============================
