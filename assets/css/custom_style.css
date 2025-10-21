@@ -171,7 +171,7 @@
    Banner personalizado
    ============================== */
 .lgx-banner {
-    background: url("assets/img/COLORES NMA.jpg") center top no-repeat; /* tu imagen */
+    background: url("assets/img/COLORES-NMA.png") center center no-repeat; /* tu imagen */
     background-size: cover; /* cubre todo el contenedor */
     height: 100vh; /* altura igual a la ventana */
     position: relative;
