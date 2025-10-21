@@ -138,8 +138,8 @@
 .navbar-toggle {
     background-color: #16a086; /* color principal del sitio */
     border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +148,7 @@
 
 .navbar-toggle i {
     color: #ffffff;   /* color del icono */
-    font-size: 24px;  /* tamaño del icono */
+    font-size: 18px;  /* tamaño del icono */
 }
 
 /* Hover */
