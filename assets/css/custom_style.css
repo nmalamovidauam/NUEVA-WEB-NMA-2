@@ -61,7 +61,7 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #ffffff; /* color de la barra normal */
+    background: transparent; /* color de la barra normal */
     transition: all 0.3s ease;
     display: flex;
     align-items: center; /* centra verticalmente */
@@ -140,6 +140,7 @@
     #scroll-navbar .navbar-toggle { display: flex; align-items: center; }
     #scroll-navbar .navbar-collapse { background: #004C99; }
 }
+
 
 /* ==============================
    MEDIA QUERIES (RESPONSIVE)
