@@ -61,7 +61,7 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background: transparent; /* color de la barra normal */
+    background: #ffffff; /* color de la barra normal */
     transition: all 0.3s ease;
     display: flex;
     align-items: center; /* centra verticalmente */
@@ -114,33 +114,6 @@
     display: flex;
     align-items: center; /* toggle centrado verticalmente */
 }
-
-/* ==============================
-   NAVBAR FIJA SCROLL
-   ============================== */
-#scroll-navbar {
-    position: fixed;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    background: #004C99; /* color azul del banner */
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: top 0.4s ease;
-    display: flex;
-    align-items: center;
-}
-
-#scroll-navbar.mostrar { top: 0; }
-#scroll-navbar img { height: 45px; width: auto; transition: filter 0.3s ease; }
-#scroll-navbar .navbar-toggle { display: none; }
-#scroll-navbar .navbar-collapse { transition: all 0.3s ease; }
-
-@media (max-width: 992px) {
-    #scroll-navbar .navbar-toggle { display: flex; align-items: center; }
-    #scroll-navbar .navbar-collapse { background: #004C99; }
-}
-
 
 /* ==============================
    MEDIA QUERIES (RESPONSIVE)
