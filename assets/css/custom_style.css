@@ -134,3 +134,35 @@
     .lgx-header.sticky .navbar-header { height: 40px; }
 }
 
+/* Estilo del botón hamburguesa */
+.navbar-toggle {
+    background-color: #16a086; /* color principal del sitio */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar-toggle i {
+    color: #ffffff;   /* color del icono */
+    font-size: 24px;  /* tamaño del icono */
+}
+
+/* Hover */
+.navbar-toggle:hover {
+    background-color: #d80e8c; /* efecto hover */
+}
+
+/* Solo visible en móvil */
+.visible-xs {
+    display: none; /* se sobreescribirá con media query */
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: flex !important; /* mostrar solo en móvil */
+    }
+}
