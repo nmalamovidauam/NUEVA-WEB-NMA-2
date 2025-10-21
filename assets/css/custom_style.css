@@ -168,7 +168,7 @@
 }
 
 /* ==============================
-   Banner personalizado (actualizado)
+   Banner personalizado (definitivo)
    ============================== */
 
 /* Imagen de fondo y altura completa */
@@ -197,17 +197,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* limita ancho máximo para no romper en móviles */
-    max-width: 1200px; /* ancho máximo en PC */
+    width: 90%;        /* ancho máximo para centrar en PC */
+    max-width: 1200px; /* ancho máximo del contenido */
     z-index: 2;
     text-align: center;
 }
 
-/* Quitar padding/margen de container y row solo dentro del banner */
+/* Quitar padding/margen de todos los elementos intermedios para centrado perfecto */
+.lgx-banner .lgx-inner-fixed,
 .lgx-banner .container,
-.lgx-banner .row {
+.lgx-banner .row,
+.lgx-banner .col-xs-12,
+.lgx-banner-info-area {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 /* Ajuste de títulos y subtítulos sobre la imagen */
@@ -216,21 +220,9 @@
 .lgx-banner-info .location,
 .lgx-banner-info .lgx-btn {
     color: #fff;
-    word-wrap: break-word; /* para que los hashtags largos no se salgan */
+    word-wrap: break-word; /* permite saltos de línea en textos largos */
 }
 
-/* Ajustes responsive para móviles */
-@media (max-width: 768px) {
-    .lgx-banner-info .title {
-        font-size: 2rem; /* reduce tamaño del hashtag en móviles */
-    }
-    .lgx-banner-info .subtitle {
-        font-size: 1.2rem;
-    }
-    .lgx-banner-info .location {
-        font-size: 1rem;
-    }
-    .lgx-inner {
-        width: 95%; /* un poco más de margen lateral */
-    }
-}
+/* ==============================
+   Ajustes responsive para móviles
+   ==
