@@ -61,7 +61,7 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #ffffff; /* color de la barra normal */
+    background: transparent; /* color de la barra normal */
     transition: all 0.3s ease;
     display: flex;
     align-items: center; /* centra verticalmente */
