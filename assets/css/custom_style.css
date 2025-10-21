@@ -166,3 +166,45 @@
         display: flex !important; /* mostrar solo en móvil */
     }
 }
+
+/* ==============================
+   Banner personalizado
+   ============================== */
+.lgx-banner {
+    background: url("assets/img/COLORES NMA.jpg") center top no-repeat; /* tu imagen */
+    background-size: cover; /* cubre todo el contenedor */
+    height: 100vh; /* altura igual a la ventana */
+    position: relative;
+}
+
+/* Si quieres un overlay de color semitransparente para que el texto resalte */
+.lgx-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22,160,134,0.4); /* color + transparencia */
+    z-index: 1;
+}
+
+/* Contenido centrado dentro del banner */
+.lgx-inner {
+    position: relative;
+    z-index: 2; /* encima del overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+    height: 100%;
+    text-align: center;
+}
+
+/* Ajuste de títulos y subtítulos sobre la imagen */
+.lgx-banner-info .subtitle,
+.lgx-banner-info .title,
+.lgx-banner-info .location,
+.lgx-banner-info .lgx-btn {
+    color: #fff; /* texto blanco sobre la imagen */
+}
