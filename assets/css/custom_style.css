@@ -225,4 +225,49 @@
 
 /* ==============================
    Ajustes responsive para móviles
-   ==
+   
+
+/* ===========================
+   INTRO (pantalla inicial)
+   =========================== */
+.intro-section {
+  height: 100vh;
+  background-color: #000; /* Cambia si quieres otro color o añade una imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+.intro-logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ===========================
+   HEADER ANIMADO
+   =========================== */
+.lgx-header {
+  position: fixed;
+  top: -100px; /* oculto arriba al cargar */
+  width: 100%;
+  transition: top 0.4s ease-in-out;
+  z-index: 999;
+}
+
+/* Cuando se hace scroll */
+.lgx-header.visible {
+  top: 0;
+}
+
+/* Suaviza el scroll al hacer clic en los enlaces */
+html {
+  scroll-behavior: smooth;
+}
