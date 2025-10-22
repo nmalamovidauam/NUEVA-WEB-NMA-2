@@ -290,3 +290,37 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #333;
+  padding: 20px;
+}
+
+.about-text h2.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2a2a2a;
+}
+
+.about-text p {
+  margin-bottom: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-text h2.heading {
+    font-size: 1.6rem;
+  }
+}
