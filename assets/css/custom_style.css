@@ -271,3 +271,22 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Header oculto al inicio */
+.lgx-header {
+  position: fixed;
+  top: -100px; /* oculto arriba al cargar */
+  width: 100%;
+  transition: top 0.4s ease-in-out;
+  z-index: 999;
+}
+
+/* Header aparece al hacer scroll */
+.lgx-header.visible {
+  top: 0;
+}
+
+/* Suaviza el scroll al hacer clic en los enlaces */
+html {
+  scroll-behavior: smooth;
+}
