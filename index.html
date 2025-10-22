@@ -315,6 +315,17 @@
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/language.script.js"></script>
 
+<script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector(".lgx-header");
+    if (window.scrollY > 100) { // aparece después de 100px de scroll
+      header.classList.add("visible");
+    } else {
+      header.classList.remove("visible");
+    }
+  });
+</script>    
+    
 </body>
 </html>
 
