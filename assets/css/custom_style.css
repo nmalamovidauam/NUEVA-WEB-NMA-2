@@ -402,6 +402,27 @@ html {
   }
 
   .lgx-banner-info .subtitle {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
   }
+}
+
+/* Márgenes entre secciones principales */
+#sobre-nosotros,
+#apoyanos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Márgenes más pequeños en móviles */
+@media (max-width: 768px) {
+    #sobre-nosotros,
+    #apoyanos {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.about-text a.btn {
+    display: block;       /* para centrar y respetar margen */
+    margin: 20px auto 0 auto;  /* 20px encima, centrado horizontalmente */
 }
