@@ -222,9 +222,6 @@
     color: #fff;
     word-wrap: break-word; /* permite saltos de línea en textos largos */
 }
-
-/* ==============================
-   Ajustes responsive para móviles
    
 
 /* ===========================
@@ -322,5 +319,89 @@ html {
 
   .about-text h2.heading {
     font-size: 1.6rem;
+  }
+}
+
+/* ==============================
+   BANNER AJUSTADO Y RESPONSIVE
+   ============================== */
+.lgx-banner-style {
+  background: url("../img/COLORES-NMA.png") center center no-repeat !important;
+  background-size: cover !important;
+  height: 400px !important; /* Altura fija (ajústala si quieres) */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lgx-banner-style::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22,160,134,0.4);
+  z-index: 1;
+}
+
+.lgx-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lgx-banner .lgx-inner-fixed,
+.lgx-banner .container,
+.lgx-banner .row,
+.lgx-banner .col-xs-12,
+.lgx-banner-info-area {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.lgx-banner-info .subtitle,
+.lgx-banner-info .title,
+.lgx-banner-info .location,
+.lgx-banner-info .lgx-btn {
+  color: #fff;
+  word-wrap: break-word;
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 992px) {
+  .lgx-banner-style {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .lgx-banner-style {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .lgx-banner-style {
+    height: 240px !important;
+    background-position: center top !important;
+  }
+
+  .lgx-inner {
+    width: 95%;
+  }
+
+  .lgx-banner-info .title {
+    font-size: 1.6rem !important;
+    line-height: 2rem !important;
+  }
+
+  .lgx-banner-info .subtitle {
+    font-size: 1.2rem !important;
   }
 }
