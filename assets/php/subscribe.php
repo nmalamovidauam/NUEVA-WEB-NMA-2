@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* ..............................................................................
  * Author:--------------- Themearth Team
  * AuthorEmail:-----------themearth.info@gmail.com
@@ -7,67 +7,51 @@
  * Copyright:------------ Copyright (C) 2015 logichunt.com. All Rights Reserved.
  * License:-------------- http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * ..............................................................................
- * File:- subscribe.php
- ................................................................................ */
+ * File:- subscribe.php (Modificado por NMA para usar MongoDB Atlas)
+ * .............................................................................. */
 
-    require 'subscribe-config.php';
+require 'vendor/autoload.php'; // Requiere Composer y la librería MongoDB
 
-	$ajax_response  = array(
-		'success' => false,
-		'message' => 'Email is not valid.',
-	);
+use MongoDB\Client;
 
-	function is_already_subscribe($email) {
-		if (is_file('subscribe.csv')) {
-			$fp = fopen('subscribe.csv', 'r');
-			while (!feof($fp) ) {
-			    $subscribe_list = fgetcsv($fp);
-			    if ($subscribe_list[0] == $email) {
-			    	fclose($fp);
-			    	return true;
-			    }
-			}
-	    	fclose($fp);
-	    	return false;
-		}
-		return false;
-	}
+// Configura tu conexión MongoDB Atlas
+$uri = "mongodb+srv://NMA-Nuestromundoqueseavecina:NMAcomunidad25@cluster0.cucv1nu.mongodb.net/nma_subscribers?retryWrites=true&w=majority&appName=Cluster0";
+$client = new Client($uri);
+$collection = $client->nma_subscribers->emails;
 
-	if ($_POST['email']) {
-		$email = strtolower($_POST['email']);
-		if ($email != null && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$ajax_response = array(
-				'success' => true,
-				'message' => '<i class="fa fa-check"></i> <strong>Congratulation!</strong> To complete the Subscription Process, Please Check Your Email and Follow the Instruction. ',
-			);
+// Respuesta base
+$response = [
+    "success" => false,
+    "message" => "Correo inválido."
+];
 
-			//saving in csv file
-			if ($save_in_csv && !is_already_subscribe($email)) {
-				$fp = fopen('subscribe.csv', 'a');
-				$list = array ($email);
-				fputcsv($fp, $list);
-				fclose($fp);
-			}
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["email"])) {
+    $email = strtolower(trim($_POST["email"]));
 
-            if ( $send_email && $api_key != null && $list_id != null ) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Comprobamos si ya está suscrito
+        $exists = $collection->findOne(["email" => $email]);
 
-	            require_once( 'Mailchimp.php' );
-                $cbx_mailchimp = new Mailchimp( $api_key );
+        if ($exists) {
+            $response = [
+                "success" => false,
+                "message" => "Este correo ya está suscrito."
+            ];
+        } else {
+            // Insertar nuevo suscriptor
+            $collection->insertOne([
+                "email" => $email,
+                "fecha" => date("Y-m-d H:i:s")
+            ]);
 
-                try {
-                    $subscriber = $cbx_mailchimp->lists->subscribe( $list_id, array( 'email' => htmlentities($_POST['email'] ) ) );
-                    if ( empty( $subscriber['euid'] ) || empty( $subscriber['leid'] ) ) {
-                        throw new Exception( 'Oops. Something went wrong. Please try again later.' );
-                    }
-                } catch( Exception $Exp) {
-                    $ajax_response = array (
-                        'success' => false,
-                        'message' => $Exp->getMessage()
-                    );
-                }
-            }
-			echo json_encode($ajax_response);
-		} else {
-			echo json_encode($ajax_response);
-		}
-	}
+            $response = [
+                "success" => true,
+                "message" => "¡Gracias por unirte a NMA!"
+            ];
+        }
+    }
+}
+
+// Devolver JSON
+header("Content-Type: application/json");
+echo json_encode($response);
