@@ -1,17 +1,70 @@
-.lgx-tab2 .nav-pills li a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #e0e0e0; opacity: 0.7; } 
-.lgx-tab2 .nav-pills li.active a p { font-size: 1.4rem; line-height: 2.1rem; font-weight: 300; margin: 0px; color: #ffffff; opacity: 0.7; }
+/* ==============================
+   Tabs
+   ============================== */
+.lgx-tab2 .nav-pills li a p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    margin: 0px;
+    color: #e0e0e0;
+    opacity: 0.7;
+}
+
+.lgx-tab2 .nav-pills li.active a p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    margin: 0px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+/* ==============================
+   Registration Area
+   ============================== */
 .lgx-registration-area .recommended { background: #16a086; }
-.lgx-registration-area .lgx-single-registration .single-top .price { font-family: Poppins, sans-serif; color: rgb(255, 255, 255); font-size: 6.8rem; line-height: 8rem; font-weight: 900; }
-.lgx-banner-info-circle .info-circle-inner .date { margin-top: 0px; padding-top: 2.6rem; font-size: 16.6rem; line-height: 16rem; color: #ffffff; }
-.lgx-banner-info .subtitle { font-family: Poppins, sans-serif; font-size: 4rem; font-weight: 600; color: #16a086; margin: 0px; line-height: 7.2rem; }
-.lgx-banner-info-circle { background: linear-gradient(to top, #34495e 0px, #ec398b 100%); padding: 1.5rem; margin-right: 5rem; height: 420px; width: 420px; border-radius: 50%; }
-.lgx-schedule { background: #16a086; }
-.lgx-registration { background-color: #34495e; }
+
+.lgx-registration-area .lgx-single-registration .single-top .price {
+    font-family: Poppins, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 6.8rem;
+    line-height: 8rem;
+    font-weight: 900;
+}
+
 .lgx-registration-area .lgx-single-registration .lgx-btn { background: rgb(52, 73, 94); }
-.lgx-registration-area .recommended .single-top .price, .lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
+
+.lgx-registration-area .recommended .single-top .price,
+.lgx-registration-area .recommended .single-top .title { color: #d80e8c; }
+
+.lgx-registration { background-color: #34495e; }
+
+/* ==============================
+   Banner Info Circle
+   ============================== */
+.lgx-banner-info-circle .info-circle-inner .date {
+    margin-top: 0px;
+    padding-top: 2.6rem;
+    font-size: 16.6rem;
+    line-height: 16rem;
+    color: #ffffff;
+}
+
+.lgx-banner-info-circle {
+    background: linear-gradient(to top, #34495e 0px, #ec398b 100%);
+    padding: 1.5rem;
+    margin-right: 5rem;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+}
+
+/* ==============================
+   Schedule, Footer, Buttons
+   ============================== */
+.lgx-schedule { background: #16a086; }
 .lgx-footer .lgx-inner-footer { background: #ec398b; }
 
-/* Botones generales */
 .single-bottom, .lgx-btn, .lgx-submit, .wpcf7-submit, button {
     overflow: hidden;
     border: none;
@@ -36,41 +89,33 @@
     box-shadow: 0 8px 6px -6px rgba(50, 51, 51, .4);
 }
 
-.vip-btn:hover {
-    background: #16a086 !important;
-}
+.vip-btn:hover { background: #16a086 !important; }
 
-/* Countdown */
-.lgx-countdown-area {
-    margin-left: 15px !important;
-    margin-top: 15px !important;
-}
+/* ==============================
+   Countdown
+   ============================== */
+.lgx-countdown-area { margin-left: 15px !important; margin-top: 15px !important; }
+.lgx-days, .lgx-hr, .lgx-min, .lgx-sec { margin-top: 7px !important; }
 
-.lgx-days, .lgx-hr, .lgx-min, .lgx-sec {
-    margin-top: 7px !important;
-}
-
-.lgx-banner-info .title span {
-    font-style: normal;
-}
-
-/*Logo y header*/
+/* ==============================
+   Logo y Header
+   ============================== */
 .lgx-header-position-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
-    background: transparent; /* color de la barra normal */
+    background: transparent;
     transition: all 0.3s ease;
     display: flex;
-    align-items: center; /* centra verticalmente */
+    align-items: center;
 }
 
 .lgx-navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    justify-content: space-between;
     width: 100%;
     padding: 0 20px;
 }
@@ -78,65 +123,34 @@
 .navbar-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* logo a la izquierda */
-    height: 100px; /* altura del header normal */
-    padding: 0 15px; /* espacio lateral */
+    justify-content: flex-start;
+    height: 100px;
+    padding: 0 15px;
     transition: height 0.3s ease, padding 0.3s ease;
 }
 
-.lgx-header.sticky .navbar-header {
-    height: 70px; /* altura cuando se hace scroll */
-    padding: 0 15px;
-}
+.lgx-header.sticky .navbar-header { height: 70px; }
 
 .lgx-logo {
     display: flex;
-    align-items: center; /* centra verticalmente */
-    justify-content: flex-start; /* logo alineado a la izquierda */
+    align-items: center;
+    justify-content: flex-start;
     height: 100%;
     padding: 0;
 }
 
 .lgx-logo img {
-    max-height: 120px; /* tamaño normal */
+    max-height: 120px;
     height: auto;
     width: auto;
     object-fit: contain;
     display: block;
 }
 
-.lgx-header.sticky .lgx-logo img {
-    max-height: 70px; /* tamaño reducido al hacer scroll */
-}
+.lgx-header.sticky .lgx-logo img { max-height: 70px; }
 
 .navbar-toggle {
-    margin: 0;
-    display: flex;
-    align-items: center; /* toggle centrado verticalmente */
-}
-
-/* ==============================
-   MEDIA QUERIES (RESPONSIVE)
-   ============================== */
-@media (max-width: 768px) {
-    .lgx-logo img { max-height: 80px; }
-    .navbar-header { height: 60px; }
-    .lgx-header.sticky .navbar-header { height: 50px; }
-}
-@media (max-width: 740px) {
-    .lgx-logo img { max-height: 70px; }
-    .navbar-header { height: 55px; }
-    .lgx-header.sticky .navbar-header { height: 45px; }
-}
-@media (max-width: 461px) {
-    .lgx-logo img { max-height: 60px; }
-    .navbar-header { height: 50px; }
-    .lgx-header.sticky .navbar-header { height: 40px; }
-}
-
-/* Estilo del botón hamburguesa */
-.navbar-toggle {
-    background-color: #16a086; /* color principal del sitio */
+    background-color: #16a086;
     border: none;
     padding: 6px 10px;
     border-radius: 2px;
@@ -146,40 +160,25 @@
     cursor: pointer;
 }
 
-.navbar-toggle i {
-    color: #ffffff;   /* color del icono */
-    font-size: 18px;  /* tamaño del icono */
-}
+.navbar-toggle i { color: #fff; font-size: 18px; }
+.navbar-toggle:hover { background-color: #d80e8c; }
 
-/* Hover */
-.navbar-toggle:hover {
-    background-color: #d80e8c; /* efecto hover */
-}
-
-/* Solo visible en móvil */
-.visible-xs {
-    display: none; /* se sobreescribirá con media query */
-}
-
-@media (max-width: 767px) {
-    .visible-xs {
-        display: flex !important; /* mostrar solo en móvil */
-    }
-}
+.visible-xs { display: none; }
+@media (max-width: 767px) { .visible-xs { display: flex !important; } }
 
 /* ==============================
-   Banner personalizado (definitivo)
+   Banner principal
    ============================== */
-
-/* Imagen de fondo y altura completa */
 .lgx-banner-style {
     background: url("../img/COLORES-NMA.png") center center no-repeat !important;
     background-size: cover !important;
     height: 100vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Overlay semitransparente */
 .lgx-banner-style::before {
     content: "";
     position: absolute;
@@ -191,238 +190,71 @@
     z-index: 1;
 }
 
-/* Contenido centrado dentro del banner */
 .lgx-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;        /* ancho máximo para centrar en PC */
-    max-width: 1200px; /* ancho máximo del contenido */
+    position: relative;
     z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lgx-banner-info .title { color: #16a086; }
+.lgx-banner-info .subtitle { color: #d80e8c; }
+.lgx-banner-info .location,
+.lgx-banner-info .lgx-btn { color: #ffffff; }
+
+.lgx-banner .lgx-inner-fixed,
+.lgx-banner .container,
+.lgx-banner .row,
+.lgx-banner .col-xs-12,
+.lgx-banner-info-area { padding: 0; margin: 0; width: 100%; }
+
+/* ==============================
+   Intro y About
+   ============================== */
+.intro-section {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
 }
 
-/* Quitar padding/margen de todos los elementos intermedios para centrado perfecto */
-.lgx-banner .lgx-inner-fixed,
-.lgx-banner .container,
-.lgx-banner .row,
-.lgx-banner .col-xs-12,
-.lgx-banner-info-area {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-/* Ajuste de títulos y subtítulos sobre la imagen */
-.lgx-banner-info .subtitle,
-.lgx-banner-info .title,
-.lgx-banner-info .location,
-.lgx-banner-info .lgx-btn {
-    color: #fff;
-    word-wrap: break-word; /* permite saltos de línea en textos largos */
-}
-   
-
-/* ===========================
-   INTRO (pantalla inicial)
-   =========================== */
-.intro-section {
-  height: 100vh;
-  background-color: #000; /* Cambia si quieres otro color o añade una imagen */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  text-align: center;
-}
-
-.intro-logo {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.intro-text {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-/* ===========================
-   HEADER ANIMADO
-   =========================== */
-.lgx-header {
-  position: fixed;
-  top: -100px; /* oculto arriba al cargar */
-  width: 100%;
-  transition: top 0.4s ease-in-out;
-  z-index: 999;
-}
-
-/* Cuando se hace scroll */
-.lgx-header.visible {
-  top: 0;
-}
-
-/* Suaviza el scroll al hacer clic en los enlaces */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Header oculto al inicio */
-.lgx-header {
-  position: fixed;
-  top: -100px; /* oculto arriba al cargar */
-  width: 100%;
-  transition: top 0.4s ease-in-out;
-  z-index: 999;
-}
-
-/* Header aparece al hacer scroll */
-.lgx-header.visible {
-  top: 0;
-}
-
-/* Suaviza el scroll al hacer clic en los enlaces */
-html {
-  scroll-behavior: smooth;
-}
+.intro-logo { width: 180px; margin-bottom: 20px; }
+.intro-text { font-size: 2rem; font-weight: 600; }
 
 .about-text {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  color: #333;
-  padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #333;
+    padding: 20px;
 }
 
 .about-text h2.heading {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #2a2a2a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2a2a2a;
 }
 
-.about-text p {
-  margin-bottom: 1.2em;
-}
+.about-text p { margin-bottom: 1.2em; }
+
+.about-text a.btn { display: block; margin: 20px auto 0 auto; }
 
 @media (max-width: 768px) {
-  .about-text {
-    padding: 15px;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .about-text h2.heading {
-    font-size: 1.6rem;
-  }
-}
-
-/* ==============================
-   BANNER AJUSTADO Y RESPONSIVE
-   ============================== */
-.lgx-banner-style {
-  background: url("../img/COLORES-NMA.png") center center no-repeat !important;
-  background-size: cover !important;
-  height: 400px !important; /* Altura fija (ajústala si quieres) */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lgx-banner-style::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(22,160,134,0.4);
-  z-index: 1;
-}
-
-.lgx-inner {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.lgx-banner .lgx-inner-fixed,
-.lgx-banner .container,
-.lgx-banner .row,
-.lgx-banner .col-xs-12,
-.lgx-banner-info-area {
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100%;
-}
-
-.lgx-banner-info .subtitle,
-.lgx-banner-info .title,
-.lgx-banner-info .location,
-.lgx-banner-info .lgx-btn {
-  color: #fff;
-  word-wrap: break-word;
-  margin: 0.5rem 0;
-}
-
-@media (min-width: 992px) {
-  .lgx-banner-style {
-    height: 400px !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .lgx-banner-style {
-    height: 300px !important;
-  }
+    .about-text { padding: 15px; font-size: 1rem; line-height: 1.6; }
+    .about-text h2.heading { font-size: 1.6rem; }
+    .lgx-banner-style { height: 70vh; }
 }
 
 @media (max-width: 600px) {
-  .lgx-banner-style {
-    height: 240px !important;
-    background-position: center top !important;
-  }
-
-  .lgx-inner {
-    width: 95%;
-  }
-
-  .lgx-banner-info .title {
-    font-size: 1.6rem !important;
-    line-height: 2rem !important;
-  }
-
-  .lgx-banner-info .subtitle {
-    font-size: 1.4rem !important;
-  }
-}
-
-/* Márgenes entre secciones principales */
-#sobre-nosotros,
-#apoyanos {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-/* Márgenes más pequeños en móviles */
-@media (max-width: 768px) {
-    #sobre-nosotros,
-    #apoyanos {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-}
-
-.about-text a.btn {
-    display: block;       /* para centrar y respetar margen */
-    margin: 20px auto 0 auto;  /* 20px encima, centrado horizontalmente */
+    .lgx-banner-style { height: 50vh; background-position: center top; }
 }
