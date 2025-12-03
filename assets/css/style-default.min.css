@@ -14119,4 +14119,74 @@ blockquote.lgx-testi-single:before {
 
 	}
 
+
+}
+
+/* ==========================================================================
+   NMA CUSTOM FIXES & ADDITIONS (Añadir al final de style-default.css)
+   ========================================================================== */
+
+/* 1. Corrección para 'Ponencias Pasadas' (lgx-schedule)
+   El original tenía fondo morado, lo cambiamos a blanco para que se lea el texto oscuro */
+.lgx-schedule {
+    background: #ffffff !important; 
+}
+.lgx-schedule .lgx-inner {
+    /* Mantenemos el patrón sutil si existe, o fondo transparente */
+    background: url('../img/schedule-bg-pattern.png') bottom center no-repeat;
+    background-size: cover;
+    padding: 13rem 0; /* Aseguramos el espaciado correcto */
+}
+
+/* 2. Definición Nueva para 'Ponencias Futuras' (lgx-travelinfo)
+   Esta clase no existía como bloque principal en tu CSS original */
+.lgx-travelinfo {
+    background: #f9f9f9; /* Fondo gris muy suave para diferenciar secciones */
+    display: block;
+    position: relative;
+}
+.lgx-travelinfo .lgx-inner {
+    padding: 13rem 0;
+}
+
+/* 3. Corrección para 'Sponsors' (lgx-sponsors)
+   Quitamos la imagen de placeholder (placehold.it) que venía por defecto */
+.lgx-sponsors {
+    background: #ffffff !important;
+    background-image: none !important; /* Quitamos la imagen de fondo gris genérica */
+}
+.lgx-sponsors .lgx-inner {
+    background: transparent !important; /* Quitamos la capa blanca semitransparente */
+    padding: 13rem 0;
+}
+
+/* 4. Estilos para textos descriptivos (Lead Text) */
+.text-lead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: #333;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 5. Asegurar visibilidad de Títulos */
+.lgx-heading .heading {
+    color: #1b273d !important; /* Azul oscuro corporativo */
+}
+.lgx-heading .subheading {
+    color: rgba(50, 51, 51, 0.8) !important;
+}
+
+/* 6. Ajuste responsive para móviles */
+@media (max-width: 767px) {
+    .lgx-inner {
+        padding: 8rem 0; /* Un poco menos de espacio en móviles */
+    }
+    .text-lead {
+        font-size: 1.6rem;
+    }
 }
