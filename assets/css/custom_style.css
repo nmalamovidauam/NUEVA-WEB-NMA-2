@@ -426,3 +426,36 @@ html {
     display: block;       /* para centrar y respetar margen */
     margin: 20px auto 0 auto;  /* 20px encima, centrado horizontalmente */
 }
+
+/* ==============================
+   CORRECCIONES DE NAVEGACIÓN
+   ============================== */
+
+/* 1. Arreglo del color del enlace "Inicio" y otros enlaces de navegación */
+/* Fuerza el color blanco para los enlaces y evita el color morado de "enlace visitado" */
+.lgx-header-position-fixed a,
+.lgx-navbar a {
+    color: white !important; /* Usamos !important para asegurar que sobreescribe */
+    text-decoration: none;
+}
+
+/* Opcional: Arreglo de color al pasar el ratón (ajusta el color si quieres) */
+.lgx-header-position-fixed a:hover {
+    color: #d80e8c !important; 
+}
+
+
+/* 2. Ocultar el botón Toggle (las 3 rayitas) en PC (Regla General) */
+/* Lo ocultamos por completo en pantallas grandes */
+.navbar-toggle {
+    display: none !important; 
+}
+
+
+/* 3. Mostrar el botón Toggle SOLO en móvil (Media Query) */
+/* Sobreescribimos la regla anterior solo en pantallas pequeñas (767px o menos) */
+@media (max-width: 767px) {
+    .navbar-toggle {
+        display: flex !important; /* Usamos 'flex' para que se vea en móvil */
+    }
+}
