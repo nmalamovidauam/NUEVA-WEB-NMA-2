@@ -489,3 +489,38 @@ html {
         line-height: 8rem !important;
     }
 }
+
+/* =======================================================
+   ARREGLO DE CENTRADO Y SUPERPOSICIÓN (VERSIÓN 2)
+   ======================================================= */
+
+/* 1. Contenedor principal: Usamos Flexbox para centrar de verdad */
+.lgx-banner-style {
+    display: flex !important;
+    align-items: center !important;     /* Centra verticalmente */
+    justify-content: center !important; /* Centra horizontalmente */
+    height: auto !important;            /* Altura flexible */
+    min-height: 100vh !important;       /* Ocupa toda la pantalla */
+    padding-top: 100px !important;      /* Espacio para la barra de navegación */
+    padding-bottom: 50px !important;    /* Espacio abajo para no pisar la curva */
+}
+
+/* 2. CRITICO: Reseteamos la caja interna para que no flote por su cuenta */
+.lgx-inner {
+    position: relative !important;   /* Quitamos el 'absolute' que da problemas */
+    top: auto !important;            /* Anulamos la posición antigua */
+    left: auto !important;           /* Anulamos la posición antigua */
+    transform: none !important;      /* Quitamos la transformación antigua */
+    width: 100% !important;          /* Que ocupe el ancho disponible */
+    margin: 0 auto !important;       /* Centrado automático */
+}
+
+/* 3. Ajuste para que la sección blanca de abajo no se meta en la imagen */
+section#about, 
+section.ponencias-pasadas, 
+div.ponencias-pasadas { /* Cubrimos varias posibles clases */
+    margin-top: 0px !important; 
+    position: relative;
+    z-index: 10; 
+    background: #fff; /* Asegura que el fondo sea blanco opaco */
+}
