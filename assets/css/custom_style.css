@@ -459,3 +459,33 @@ html {
         display: flex !important; /* Usamos 'flex' para que se vea en móvil */
     }
 }
+
+/* =======================================================
+   PARCHE PARA ARREGLAR LA SUPERPOSICIÓN (NMA)
+   ======================================================= */
+
+/* 1. Forzamos a que la altura NO sea fija, sino que se adapte al contenido */
+.lgx-banner-style {
+    height: auto !important;          /* Deja que la caja crezca lo que necesite */
+    min-height: 100vh !important;     /* Que ocupe al menos toda la pantalla */
+    padding-top: 150px !important;    /* Espacio arriba para que el menú no tape el título */
+    padding-bottom: 120px !important; /* Espacio abajo vital para que lo blanco no suba */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* 2. Ajuste específico para móviles y tablets */
+@media (max-width: 991px) {
+    .lgx-banner-style {
+        min-height: 600px !important; /* En móvil puede ser un poco menos alto */
+        padding-top: 120px !important;
+        padding-bottom: 80px !important;
+    }
+    
+    /* Reducimos un poco el tamaño de la letra gigante solo en móvil para que encaje mejor */
+    .lgx-banner-info-circle .info-circle-inner .date {
+        font-size: 8rem !important; 
+        line-height: 8rem !important;
+    }
+}
