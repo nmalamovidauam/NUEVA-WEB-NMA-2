@@ -491,50 +491,59 @@ html {
 }
 
 /* =======================================================
-   CÓDIGO DE RESCATE (CENTRADO FLEXBOX + COLOR BLANCO)
+   SOLUCIÓN FINAL: CENTRADO ABSOLUTO Y LIMPIO
    ======================================================= */
 
-/* 1. CONTENEDOR PRINCIPAL: Usamos Flexbox para centrar perfecto */
+/* 1. CAJA DE FONDO: Usamos Flexbox para el centrado maestro */
 .lgx-banner-style {
-    border: none !important;            /* ADIÓS AL BORDE ROJO */
-    display: flex !important;           /* Activa el modo flexible */
-    flex-direction: column !important;  /* Apila las cosas verticalmente */
-    justify-content: center !important; /* Centra VERTICALMENTE (Arriba/Abajo) */
-    align-items: center !important;     /* Centra HORIZONTALMENTE (Izq/Der) */
-    height: 100vh !important;           /* Ocupa toda la pantalla */
-    padding-top: 0 !important;          /* Quitamos paddings raros */
-    padding-bottom: 0 !important;
-}
-
-/* 2. CAJA DE TEXTO: La obligamos a comportarse */
-.lgx-inner {
-    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; /* Centra verticalmente */
+    align-items: center !important;     /* Centra horizontalmente todo el bloque */
+    height: 100vh !important;
     width: 100% !important;
-    max-width: 1200px !important;       /* Evita que se estire demasiado */
-    margin: 0 auto !important;          /* Margen automático a los lados */
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    text-align: center !important;      /* Alineación de texto al centro */
+    padding: 0 !important;
+    border: none !important;
 }
 
-/* 3. TEXTOS: Forzamos el color blanco y la alineación */
+/* 2. QUITAR EL "EMPUJÓN" A LA IZQUIERDA */
+/* Esto aplana todos los contenedores de Bootstrap para que no estorben */
+.lgx-inner,
+.lgx-inner .container,
+.lgx-inner .row,
+.lgx-inner .col-xs-12,
+.lgx-banner-info-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;      /* Quita márgenes extraños */
+    padding: 0 !important;     /* CLAVE: Quita el relleno izquierdo que descentraba */
+    float: none !important;
+    position: static !important;
+    transform: none !important;
+}
+
+/* 3. CENTRAR EL TEXTO Y ARREGLAR EL IDIOMA */
+.lgx-banner-info {
+    text-align: center !important; /* Obliga al texto a ir al medio */
+    width: 100% !important;
+}
+
+/* Aquí solo tocamos el color y la alineación. 
+   AL NO PONER 'display', el sistema de idiomas volverá a funcionar bien. */
 .lgx-banner-info .title,
 .lgx-banner-info .subtitle,
 .lgx-banner-info h2,
 .lgx-banner-info h3,
-.lgx-banner-info span {
-    color: #ffffff !important;          /* RECUPERAMOS EL COLOR BLANCO */
+.lgx-banner-info span,
+.lgx-banner-info p {
+    color: #ffffff !important;
     text-align: center !important;
-    width: 100% !important;
-    display: block !important;          /* Asegura que ocupen el ancho para centrarse */
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
-/* 4. Mover el bloque un poco hacia arriba o abajo si hace falta */
-/* Si lo quieres más abajo, pon margin-top positivo (ej. 50px) */
-/* Si lo quieres más arriba, pon margin-top negativo (ej. -50px) */
+/* 4. AJUSTE FINO DE ALTURA */
+/* Si lo sientes muy alto o bajo, cambia este margen */
 .lgx-banner-info {
-    margin-top: -50px !important;       /* Ajuste fino visual */
+    margin-top: -30px !important; 
 }
