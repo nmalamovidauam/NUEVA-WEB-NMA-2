@@ -609,3 +609,33 @@ section h2, section p, section span {
     margin-right: auto !important;   /* Empuje automático desde la derecha */
     float: none !important;
 }
+
+/* =======================================================
+   ARREGLO DEL FOOTER (BOTÓN DE SUSCRIPCIÓN)
+   ======================================================= */
+
+/* 1. Resetear el botón del footer para que no tenga margen gigante */
+.lgx-subscribe-form .lgx-btn {
+    margin-top: 0 !important;         /* Quitamos el empujón de 40px */
+    margin-left: 10px !important;     /* Un poquito de aire a la izquierda */
+    margin-right: 0 !important;
+    display: inline-block !important; /* Que se ponga en línea, no debajo */
+    width: auto !important;           /* Que ocupe lo que necesite, no más */
+    vertical-align: middle !important; /* Alineado al centro con el input */
+    float: none !important;
+}
+
+/* 2. Alinear perfectamente el Input (caja de texto) y el Botón */
+.lgx-subscribe-form {
+    display: flex !important;           /* Usamos Flexbox aquí también */
+    justify-content: center !important; /* Centrado horizontal */
+    align-items: center !important;     /* Centrado vertical */
+    flex-wrap: wrap !important;         /* Si es móvil, que baje ordenado */
+}
+
+/* 3. Asegurar que los contenedores del formulario no estorben */
+.lgx-subscribe-form .form-group {
+    margin-bottom: 0 !important;
+    display: inline-block !important;
+    width: auto !important;
+}
