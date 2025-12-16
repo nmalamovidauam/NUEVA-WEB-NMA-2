@@ -490,44 +490,51 @@ html {
     }
 }
 
-   /* =======================================================
-   OPCIÓN NUCLEAR: POSICIONAMIENTO MANUAL
+/* =======================================================
+   CÓDIGO DE RESCATE (CENTRADO FLEXBOX + COLOR BLANCO)
    ======================================================= */
 
-/* 1. BORDE ROJO DE PRUEBA (Para ver si el código funciona) */
-/* Si no ves un borde rojo alrededor de todo, es que NO se ha actualizado el archivo */
+/* 1. CONTENEDOR PRINCIPAL: Usamos Flexbox para centrar perfecto */
 .lgx-banner-style {
-    border: 5px solid red !important; 
-    
-    /* Desactivamos el centrado automático para hacerlo manual */
-    display: block !important; 
-    height: 100vh !important;      /* Altura de pantalla completa */
-    
-    /* AQUÍ ESTÁ EL TRUCO: */
-    /* Empujamos todo el contenido hacia abajo un 35% de la pantalla */
-    /* SI LO QUIERES MÁS ABAJO: Cambia 35vh por 40vh o 45vh */
-    padding-top: 35vh !important;  
-    
-    box-sizing: border-box !important;
+    border: none !important;            /* ADIÓS AL BORDE ROJO */
+    display: flex !important;           /* Activa el modo flexible */
+    flex-direction: column !important;  /* Apila las cosas verticalmente */
+    justify-content: center !important; /* Centra VERTICALMENTE (Arriba/Abajo) */
+    align-items: center !important;     /* Centra HORIZONTALMENTE (Izq/Der) */
+    height: 100vh !important;           /* Ocupa toda la pantalla */
+    padding-top: 0 !important;          /* Quitamos paddings raros */
+    padding-bottom: 0 !important;
 }
 
-/* 2. Reseteo total del bloque de texto */
+/* 2. CAJA DE TEXTO: La obligamos a comportarse */
 .lgx-inner {
-    /* Anulamos cualquier posición absoluta anterior */
-    position: static !important; 
-    transform: none !important;
-    margin: 0 auto !important;    /* Centrado horizontal */
+    position: relative !important;
     width: 100% !important;
-    text-align: center !important; /* Fuerza el texto al centro */
+    max-width: 1200px !important;       /* Evita que se estire demasiado */
+    margin: 0 auto !important;          /* Margen automático a los lados */
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    text-align: center !important;      /* Alineación de texto al centro */
 }
 
-/* 3. Aseguramos que los contenedores internos no tiren a la izquierda */
-.lgx-inner .container, 
-.lgx-inner .row, 
-.lgx-inner .col-xs-12 {
-    float: none !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
+/* 3. TEXTOS: Forzamos el color blanco y la alineación */
+.lgx-banner-info .title,
+.lgx-banner-info .subtitle,
+.lgx-banner-info h2,
+.lgx-banner-info h3,
+.lgx-banner-info span {
+    color: #ffffff !important;          /* RECUPERAMOS EL COLOR BLANCO */
     text-align: center !important;
+    width: 100% !important;
+    display: block !important;          /* Asegura que ocupen el ancho para centrarse */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 4. Mover el bloque un poco hacia arriba o abajo si hace falta */
+/* Si lo quieres más abajo, pon margin-top positivo (ej. 50px) */
+/* Si lo quieres más arriba, pon margin-top negativo (ej. -50px) */
+.lgx-banner-info {
+    margin-top: -50px !important;       /* Ajuste fino visual */
 }
