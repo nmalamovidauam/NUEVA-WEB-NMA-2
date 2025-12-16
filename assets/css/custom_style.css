@@ -549,54 +549,63 @@ html {
 }
 
 /* =======================================================
-   DISEÑO DE BLOQUES SEPARADOS (EFECTO PÁGINA)
+   DISEÑO PANTALLA COMPLETA (FULL PAGE) + ARREGLO BOTÓN
    ======================================================= */
 
-/* 1. SECCIÓN: PONENCIAS PASADAS (Fondo Blanco + Mucho espacio) */
-section#ponencias-pasadas {
-    background-color: #ffffff !important;
-    padding-top: 120px !important;    /* Espacio gigante arriba */
-    padding-bottom: 120px !important; /* Espacio gigante abajo */
-    border-bottom: 1px solid #eaeaea; /* Línea sutil separadora */
+/* 1. CONFIGURACIÓN "PANTALLA COMPLETA" PARA SECCIONES */
+/* Esto hace que cada sección ocupe toda la altura de tu monitor */
+section#ponencias-pasadas,
+section#ponencias-futuras,
+section#sponsors {
+    min-height: 100vh !important;       /* Altura mínima: 100% de la pantalla */
+    display: flex !important;           /* Usamos Flexbox para organizar */
+    flex-direction: column !important;  /* Apilar cosas verticalmente */
+    justify-content: center !important; /* Centrar el contenido VERTICALMENTE */
+    align-items: center !important;     /* Centrar el contenido HORIZONTALMENTE */
+    padding-top: 50px !important;       /* Relleno un poco más suave */
+    padding-bottom: 50px !important;
 }
 
-/* 2. SECCIÓN: PONENCIAS FUTURAS (Fondo Gris Claro + Contraste) */
+/* 2. COLORES DE FONDO (Efecto Cebra) */
+section#ponencias-pasadas {
+    background-color: #ffffff !important;
+}
+
 section#ponencias-futuras {
-    background-color: #f7f9fa !important; /* Un gris muy suave y moderno */
-    padding-top: 120px !important;
-    padding-bottom: 120px !important;
-    border-top: 1px solid #e1e1e1;        /* Borde para resaltar el cambio */
+    background-color: #f4f6f7 !important; /* Gris suave */
+    border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
 }
 
-/* 3. SECCIÓN: SPONSORS (Fondo Blanco de nuevo) */
 section#sponsors {
     background-color: #ffffff !important;
-    padding-top: 120px !important;
-    padding-bottom: 120px !important;
 }
 
-/* 4. ASEGURAR EL CENTRADO DE TEXTOS Y BOTONES */
-/* Esto fuerza a que todo el contenido dentro de esas secciones vaya al centro */
-section#ponencias-pasadas .col-md-12,
-section#ponencias-futuras .col-md-12,
-section#sponsors .col-xs-12 {
+/* 3. CENTRADO DE TEXTOS (Obligatorio) */
+.lgx-about-content-area, 
+.lgx-about-content,
+.lgx-heading,
+.col-md-12,
+.col-xs-12 {
+    width: 100% !important;
     text-align: center !important;
-    float: none !important;     /* Quita la flotación a la izquierda */
-    margin: 0 auto !important;  /* Centra el bloque en la pantalla */
+    float: none !important;
 }
 
-/* Centrado específico de los textos */
 section h2, section p, section span {
     text-align: center !important;
-    max-width: 900px !important; /* Evita que el texto sea una línea eterna */
     margin-left: auto !important;
     margin-right: auto !important;
+    max-width: 1000px !important;
 }
 
-/* Centrado de los botones verdes */
+/* 4. ARREGLO DEL BOTÓN VERDE (VER MÁS) */
+/* El truco final: lo convertimos en bloque y le damos márgenes automáticos */
 .lgx-btn {
-    display: inline-block !important;
-    margin-top: 30px !important;
+    display: block !important;       /* Se comporta como una caja */
+    width: fit-content !important;   /* El ancho se ajusta al texto */
+    margin-top: 40px !important;     /* Separación del texto de arriba */
+    margin-left: auto !important;    /* Empuje automático desde la izquierda */
+    margin-right: auto !important;   /* Empuje automático desde la derecha */
     float: none !important;
 }
