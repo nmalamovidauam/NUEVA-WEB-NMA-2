@@ -490,57 +490,44 @@ html {
     }
 }
 
-  /* =======================================================
-   ARREGLO DE CENTRADO PERFECTO (VERSIÓN 3 FINAL)
+   /* =======================================================
+   OPCIÓN NUCLEAR: POSICIONAMIENTO MANUAL
    ======================================================= */
 
-/* 1. El cuadro grande (Banner) usa Flexbox puro */
+/* 1. BORDE ROJO DE PRUEBA (Para ver si el código funciona) */
+/* Si no ves un borde rojo alrededor de todo, es que NO se ha actualizado el archivo */
 .lgx-banner-style {
-    display: flex !important;
-    align-items: center !important;     /* Centra horizontalmente la caja */
-    justify-content: center !important; /* Centra verticalmente la caja */
-    min-height: 100vh !important;       /* Altura de pantalla completa */
-    height: auto !important;
-    padding: 0 !important;
+    border: 5px solid red !important; 
+    
+    /* Desactivamos el centrado automático para hacerlo manual */
+    display: block !important; 
+    height: 100vh !important;      /* Altura de pantalla completa */
+    
+    /* AQUÍ ESTÁ EL TRUCO: */
+    /* Empujamos todo el contenido hacia abajo un 35% de la pantalla */
+    /* SI LO QUIERES MÁS ABAJO: Cambia 35vh por 40vh o 45vh */
+    padding-top: 35vh !important;  
+    
+    box-sizing: border-box !important;
 }
 
-/* 2. El contenido (Texto): Lo forzamos a centrarse y bajar un poco */
+/* 2. Reseteo total del bloque de texto */
 .lgx-inner {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
+    /* Anulamos cualquier posición absoluta anterior */
+    position: static !important; 
     transform: none !important;
+    margin: 0 auto !important;    /* Centrado horizontal */
     width: 100% !important;
-    margin: 0 auto !important;
-    
-    /* CENTRADO DE TEXTO OBLIGATORIO */
-    text-align: center !important;
-    
-    /* AJUSTE VERTICAL: Aumenta este número si quieres bajarlo más */
-    margin-top: 50px !important; 
-    
-    z-index: 5;
+    text-align: center !important; /* Fuerza el texto al centro */
 }
 
-/* 3. LIMPIEZA PROFUNDA: Elimina residuos de Bootstrap que tiran a la izquierda */
-.lgx-inner .container,
-.lgx-inner .row,
-.lgx-inner div[class*="col-"] {
+/* 3. Aseguramos que los contenedores internos no tiren a la izquierda */
+.lgx-inner .container, 
+.lgx-inner .row, 
+.lgx-inner .col-xs-12 {
+    float: none !important;
+    margin: 0 auto !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    float: none !important;        /* Clave: evita que se pegue a la izquierda */
-    display: block !important;
-    text-align: center !important; /* Refuerzo del centrado */
-}
-
-/* 4. Mantiene la sección blanca en su sitio */
-section#about, 
-section.ponencias-pasadas,
-.ponencias-pasadas {
-    position: relative;
-    z-index: 10;
-    background: #fff;
-    margin-top: 0 !important;
+    text-align: center !important;
 }
