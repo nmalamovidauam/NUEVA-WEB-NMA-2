@@ -547,3 +547,56 @@ html {
 .lgx-banner-info {
     margin-top: -30px !important; 
 }
+
+/* =======================================================
+   DISEÑO DE BLOQUES SEPARADOS (EFECTO PÁGINA)
+   ======================================================= */
+
+/* 1. SECCIÓN: PONENCIAS PASADAS (Fondo Blanco + Mucho espacio) */
+section#ponencias-pasadas {
+    background-color: #ffffff !important;
+    padding-top: 120px !important;    /* Espacio gigante arriba */
+    padding-bottom: 120px !important; /* Espacio gigante abajo */
+    border-bottom: 1px solid #eaeaea; /* Línea sutil separadora */
+}
+
+/* 2. SECCIÓN: PONENCIAS FUTURAS (Fondo Gris Claro + Contraste) */
+section#ponencias-futuras {
+    background-color: #f7f9fa !important; /* Un gris muy suave y moderno */
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+    border-top: 1px solid #e1e1e1;        /* Borde para resaltar el cambio */
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/* 3. SECCIÓN: SPONSORS (Fondo Blanco de nuevo) */
+section#sponsors {
+    background-color: #ffffff !important;
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+}
+
+/* 4. ASEGURAR EL CENTRADO DE TEXTOS Y BOTONES */
+/* Esto fuerza a que todo el contenido dentro de esas secciones vaya al centro */
+section#ponencias-pasadas .col-md-12,
+section#ponencias-futuras .col-md-12,
+section#sponsors .col-xs-12 {
+    text-align: center !important;
+    float: none !important;     /* Quita la flotación a la izquierda */
+    margin: 0 auto !important;  /* Centra el bloque en la pantalla */
+}
+
+/* Centrado específico de los textos */
+section h2, section p, section span {
+    text-align: center !important;
+    max-width: 900px !important; /* Evita que el texto sea una línea eterna */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Centrado de los botones verdes */
+.lgx-btn {
+    display: inline-block !important;
+    margin-top: 30px !important;
+    float: none !important;
+}
