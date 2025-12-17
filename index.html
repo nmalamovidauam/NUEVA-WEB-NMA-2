@@ -137,6 +137,15 @@ layout: null
         <div class="lgx-inner">
             <div class="container">
                 <div class="row">
+
+                    <div class="col-xs-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading">
+                                <span lang="es">Ponencias Pasadas</span>
+                                <span lang="en">Past Talks</span>
+                            </h2>
+                        </div>
+                    </div>
                     
                     {% for ponencia in site.data.ponencias_pasadas.items %}
                     <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
@@ -146,8 +155,18 @@ layout: null
                                 <h3 class="subheading" style="color: #6054bc; margin-top:10px;">{{ ponencia.fecha }}</h3>
                             </div>
                             <div class="lgx-about-content">
+                                
                                 <p class="text">
-                                    {{ ponencia.descripcion }}
+                                    <span lang="es">
+                                        {{ ponencia.descripcion }}
+                                    </span>
+                                    <span lang="en">
+                                        {% if ponencia.descripcion_en %}
+                                            {{ ponencia.descripcion_en }}
+                                        {% else %}
+                                            {{ ponencia.descripcion }}
+                                        {% endif %}
+                                    </span>
                                 </p>
 
                                 {% if ponencia.imagen %}
@@ -163,7 +182,12 @@ layout: null
                         </div>
                     </div>
                     {% endfor %}
-                    </div> </div> </div> </div> </section>
+                    
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</section>
 
 <!-- PONENCIAS FUTURAS -->
 <section id="ponencias-futuras">
