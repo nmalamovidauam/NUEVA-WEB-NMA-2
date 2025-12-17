@@ -156,18 +156,18 @@ layout: null
                             </div>
                             <div class="lgx-about-content">
                                 
-                                <p class="text">
+                                <div class="text">
                                     <span lang="es">
-                                        {{ ponencia.descripcion }}
+                                        {{ ponencia.descripcion | markdownify }}
                                     </span>
                                     <span lang="en">
                                         {% if ponencia.descripcion_en %}
-                                            {{ ponencia.descripcion_en }}
+                                            {{ ponencia.descripcion_en | markdownify }}
                                         {% else %}
-                                            {{ ponencia.descripcion }}
+                                            {{ ponencia.descripcion | markdownify }}
                                         {% endif %}
                                     </span>
-                                </p>
+                                </div>
 
                                 {% if ponencia.imagen %}
                                 <div style="margin: 20px auto; max-width: 600px;">
