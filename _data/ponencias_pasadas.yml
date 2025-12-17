@@ -1,12 +1,1 @@
-items:
-  - titulo: "Charla sobre Inteligencia Artificial"
-    fecha: "12 de Octubre, 2024"
-    imagen: "assets/img/foto_ejemplo.jpg"
-    descripcion: "Una charla increíble sobre el futuro de la IA."
-    link: "#"
-
-  - titulo: "Networking Empresarial"
-    fecha: "15 de Noviembre, 2024"
-    imagen: "assets/img/foto_networking.jpg"
-    descripcion: "Evento para conocer a líderes del sector."
-    link: "#"
+items: []
