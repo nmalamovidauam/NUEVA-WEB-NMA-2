@@ -21,4 +21,5 @@ collections:
               - {label: "Fecha", name: "fecha", widget: "string"}
               - {label: "Imagen", name: "imagen", widget: "image"}
               - {label: "Descripción", name: "descripcion", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
