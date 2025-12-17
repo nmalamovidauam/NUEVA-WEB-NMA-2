@@ -1,18 +1,24 @@
 backend:
   name: git-gateway
-  branch: main # O "master", revisa cómo se llama tu rama principal en GitHub
+  branch: main
 
-media_folder: "assets/img/ponencias" # Donde se guardarán las fotos que suban
+media_folder: "assets/img/ponencias"
 public_folder: "assets/img/ponencias"
 
 collections:
-  - name: "ponencias_pasadas"
-    label: "Ponencias Pasadas"
-    file: "_data/ponencias_pasadas.yml" # El archivo que creamos en el paso 1
-    class: "list" # Permite añadir multiples elementos
-    fields:
-      - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Fecha", name: "fecha", widget: "string"}
-      - {label: "Imagen", name: "imagen", widget: "image"}
-      - {label: "Descripción", name: "descripcion", widget: "text"}
-      - {label: "Enlace (Opcional)", name: "link", widget: "string", required: false}
+  - name: "datos"
+    label: "Gestión de Contenidos"
+    files:
+      - name: "ponencias_pasadas"
+        label: "Ponencias Pasadas"
+        file: "_data/ponencias_pasadas.yml"
+        fields:
+          - label: "Lista de Ponencias"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Fecha", name: "fecha", widget: "string"}
+              - {label: "Imagen", name: "imagen", widget: "image"}
+              - {label: "Descripción", name: "descripcion", widget: "text"}
+              - {label: "Enlace", name: "link", widget: "string", required: false}
