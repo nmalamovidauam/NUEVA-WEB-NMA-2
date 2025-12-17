@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html class="no-js">
 <head>
@@ -129,33 +132,38 @@
         <!--BANNER END-->
 
     <!-- PONENCIAS PASADAS -->
-            <section id="ponencias-pasadas">
-                <div id="lgx-past-talks" class="lgx-past-talks">
-                <div class="lgx-inner">
-                <div class="container">
-                    <div class="row">
-                     <div class="col-sm-12 col-md-12">
-                      <div class="lgx-about-content-area">
-                        <div class="lgx-heading">
-                            <h2 class="heading" ><span lang="es">Ponencias Pasadas</span><span lang="en">Past Talks</span></h2>
+    <section id="ponencias-pasadas">
+    <div id="lgx-past-talks" class="lgx-past-talks">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    
+                    {% for ponencia in site.data.ponencias_pasadas.items %}
+                    <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
+                        <div class="lgx-about-content-area">
+                            <div class="lgx-heading">
+                                <h2 class="heading">{{ ponencia.titulo }}</h2>
+                                <h3 class="subheading" style="color: #6054bc; margin-top:10px;">{{ ponencia.fecha }}</h3>
+                            </div>
+                            <div class="lgx-about-content">
+                                <p class="text">
+                                    {{ ponencia.descripcion }}
+                                </p>
+
+                                {% if ponencia.imagen %}
+                                <div style="margin: 20px auto; max-width: 600px;">
+                                    <img src="{{ ponencia.imagen }}" alt="{{ ponencia.titulo }}" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                </div>
+                                {% endif %}
+
+                                <a href="{{ ponencia.link }}" class="lgx-btn lgx-btn-primary" target="_blank" style="margin-top: 20px;">
+                                    <span><span lang="es">Ver más</span><span lang="en">See more</span></span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="lgx-about-content">
-                            <p class="text">
-                                <span lang="es">Encuentra información acerca de todas las ponencias anteriores organizadas por NMA – Nuestro mundo que se avecina.</span>
-                                <span lang="en">Find information about all past talks organized by NMA – Nuestro mundo que se avecina.</span>
-                            </p>
-                    <a href="#" class="lgx-btn lgx-btn-primary" data-toggle="modal" data-target="#modal-pasadas">
-                        <span lang="es">Ver más</span>
-                        <span lang="en">See more</span>
-                    </a>
-                </div>
-            </div>
-          </div>
-        </div>
-        </div> 
-        </div> 
-        </div>
-    </section>
+                    </div>
+                    {% endfor %}
+                    </div> </div> </div> </div> </section>
 
 <!-- PONENCIAS FUTURAS -->
 <section id="ponencias-futuras">
