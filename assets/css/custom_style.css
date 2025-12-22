@@ -639,3 +639,49 @@ section h2, section p, section span {
     display: inline-block !important;
     width: auto !important;
 }
+
+/* --- ESTILOS PARA LAS CAJAS DE UNIVERSIDAD --- */
+.uni-card-link {
+    text-decoration: none !important;
+    display: block;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.uni-card-box {
+    width: 100%;
+    padding-top: 100%; /* Truco para mantenerlo cuadrado */
+    position: relative;
+    border: 2px solid #6054bc;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.uni-logo {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.uni-name {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.uni-card-link:hover .uni-card-box {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(96, 84, 188, 0.2);
+    background-color: #fcfcff;
+}
+
+.uni-card-link:hover .uni-name {
+    color: #6054bc;
+}
