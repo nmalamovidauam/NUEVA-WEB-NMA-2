@@ -667,10 +667,12 @@ section h2, section p, section span {
     max-height: 70%;
     object-fit: contain;
 }
-
-.uni-name {
+    .uni-name {
     text-align: center;
-    margin-top: 15px;
+    /* CAMBIO AQUÍ: Quitamos margen arriba y lo ponemos abajo */
+    margin-top: 0;
+    margin-bottom: 15px; 
+    
     font-weight: 700;
     color: #333;
     transition: color 0.3s ease;
