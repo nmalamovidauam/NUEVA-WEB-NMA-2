@@ -21,10 +21,10 @@ collections:
               - {label: "Fecha", name: "fecha", widget: "string", required: false}
               - {label: "Imagen", name: "imagen", widget: "image", required: false}
               - {label: "Descripción", name: "descripcion", widget: "text"}
-              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
 
-- name: "futuras_uam"
+      - name: "futuras_uam"
         label: "Futuras UAM"
         file: "_data/futuras_uam.yml"
         fields:
@@ -36,10 +36,10 @@ collections:
               - {label: "Fecha", name: "fecha", widget: "string", required: false}
               - {label: "Imagen", name: "imagen", widget: "image", required: false}
               - {label: "Descripción", name: "descripcion", widget: "text"}
-              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
 
-- name: "futuras_uc3m"
+      - name: "futuras_uc3m"
         label: "Futuras UC3M"
         file: "_data/futuras_uc3m.yml"
         fields:
@@ -51,10 +51,10 @@ collections:
               - {label: "Fecha", name: "fecha", widget: "string", required: false}
               - {label: "Imagen", name: "imagen", widget: "image", required: false}
               - {label: "Descripción", name: "descripcion", widget: "text"}
-              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
 
-- name: "futuras_uab"
+      - name: "futuras_uab"
         label: "Futuras UAB"
         file: "_data/futuras_uab.yml"
         fields:
@@ -66,5 +66,5 @@ collections:
               - {label: "Fecha", name: "fecha", widget: "string", required: false}
               - {label: "Imagen", name: "imagen", widget: "image", required: false}
               - {label: "Descripción", name: "descripcion", widget: "text"}
-              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
