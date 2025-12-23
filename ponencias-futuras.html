@@ -28,7 +28,17 @@ layout: null
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-        /* Ajuste para móvil para que el título no sea gigante */
+        /* 1. ARREGLO DEL SCROLL: 
+           Esto fuerza que el menú se ponga oscuro cuando se añade la clase .lgx-header-fixed 
+        */
+        .lgx-header.lgx-header-fixed .lgx-header-position {
+            background-color: rgba(26, 26, 26, 0.98) !important; /* Fondo oscuro casi opaco */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Ajuste móvil */
         @media (max-width: 768px) {
             h2.title { font-size: 3rem !important; }
         }
@@ -106,7 +116,7 @@ layout: null
                     
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uam.html" class="uni-card-link">
-                            <h3 class="uni-name">UAM</h3>
+                            <h3 class="uni-name"><span lang="es">UAM</span><span lang="en">UAM</span></h3>
                             <div class="uni-card-box">
                                 {% assign uam_count = site.data.futuras_uam.items | size %}
                                 {% if uam_count > 0 %}
@@ -119,7 +129,7 @@ layout: null
 
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uc3m.html" class="uni-card-link">
-                            <h3 class="uni-name">UC3M</h3>
+                            <h3 class="uni-name"><span lang="es">UC3M</span><span lang="en">UC3M</span></h3>
                             <div class="uni-card-box">
                                 {% assign uc3m_count = site.data.futuras_uc3m.items | size %}
                                 {% if uc3m_count > 0 %}
@@ -132,7 +142,7 @@ layout: null
 
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uab.html" class="uni-card-link">
-                            <h3 class="uni-name">UAB</h3>
+                            <h3 class="uni-name"><span lang="es">UAB</span><span lang="en">UAB</span></h3>
                             <div class="uni-card-box">
                                 {% assign uab_count = site.data.futuras_uab.items | size %}
                                 {% if uab_count > 0 %}
@@ -204,10 +214,16 @@ layout: null
     </div> <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/language.script.js"></script>
+
     <script>
       window.addEventListener("scroll", function() {
         const header = document.querySelector(".lgx-header");
-        if (window.scrollY > 100) { header.classList.add("visible"); } else { header.classList.remove("visible"); }
+        // Si bajamos más de 100px, añadimos la clase que activa el fondo oscuro
+        if (window.scrollY > 100) { 
+            header.classList.add("lgx-header-fixed"); 
+        } else { 
+            header.classList.remove("lgx-header-fixed"); 
+        }
       });
     </script>
     
