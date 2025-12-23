@@ -9,7 +9,6 @@ layout: null
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     
     <title>Ponencias Futuras - NMA</title>
-    <meta name="description" content="Selecciona tu universidad para ver las próximas ponencias."/>
 
     <link rel="shortcut icon" href="assets/img/favicon/favicon.png"/>
 
@@ -27,13 +26,13 @@ layout: null
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-        /* Fondo oscuro para el menú al hacer scroll */
-        .lgx-header.lgx-header-fixed .lgx-header-position {
-            background-color: rgba(26, 26, 26, 0.98) !important;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            transition: all 0.3s ease;
+        /* Forzar que las imágenes de los logos no sean gigantes */
+        .uni-card-box img {
+            max-width: 150px !important; /* Límite de tamaño para que no se vean enormes */
+            width: auto !important;
+            margin: 0 auto;
         }
+        
         @media (max-width: 768px) {
             h2.title { font-size: 3rem !important; }
         }
@@ -213,9 +212,9 @@ layout: null
       window.addEventListener("scroll", function() {
         const header = document.querySelector(".lgx-header");
         if (window.scrollY > 100) { 
-            header.classList.add("lgx-header-fixed"); 
+            header.classList.add("visible"); // Esto activa el fondo oscuro SOLO al bajar
         } else { 
-            header.classList.remove("lgx-header-fixed"); 
+            header.classList.remove("visible"); 
         }
       });
     </script>
