@@ -9,7 +9,7 @@ layout: null
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <title>Ponencias Futuras UC3M - NMA</title>
-    <meta name="description" content="Próximas ponencias en la Universidad Autónoma de Madrid"/>
+    <meta name="description" content="Próximas ponencias en la Universidad Carlos III de Madrid"/>
 
     <link rel="shortcut icon" href="assets/img/favicon/favicon.png"/>
     <link rel="icon" href="assets/img/favicon/favicon.png"/>
@@ -103,46 +103,64 @@ layout: null
             <div class="container">
                 <div class="row">
                     
-                    {% for ponencia in site.data.futuras_uc3m.items %}
-                    <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
-                        <div class="lgx-about-content-area">
-                            <div class="lgx-heading">
-                                <h2 class="heading">{{ ponencia.titulo }}</h2>
-                                {% if ponencia.fecha %}
-                                <h3 class="subheading" style="color: #6054bc; margin-top:10px;">{{ ponencia.fecha }}</h3>
-                                {% endif %}
-                            </div>
-                            
-                            <div class="lgx-about-content">
-                                <div class="text" style="text-align: justify;">
-                                    <span lang="es">
-                                        {{ ponencia.descripcion | markdownify }}
-                                    </span>
-                                    <span lang="en">
-                                        {% if ponencia.descripcion_en %}
-                                            {{ ponencia.descripcion_en | markdownify }}
-                                        {% else %}
-                                            {{ ponencia.descripcion | markdownify }}
-                                        {% endif %}
-                                    </span>
-                                </div>
-
-                                {% if ponencia.imagen %}
-                                <div style="margin: 20px auto; max-width: 600px;">
-                                    <img src="{{ ponencia.imagen }}" alt="{{ ponencia.titulo }}" style="width: 100%; border-radius: 8px;">
-                                </div>
-                                {% endif %}
-
-                                {% if ponencia.link %}
-                                <a href="{{ ponencia.link }}" class="lgx-btn lgx-btn-primary" target="_blank" style="margin-top: 20px;">
-                                    <span><span lang="es">Más info</span><span lang="en">More info</span></span>
-                                </a>
-                                {% endif %}
+                    {% assign lista_ponencias = site.data.futuras_uc3m.items %}
+                    
+                    {% if lista_ponencias == null or lista_ponencias.size == 0 %}
+                        
+                        <div class="col-xs-12">
+                            <div class="empty-state-box">
+                                <i class="fa fa-calendar-times-o" aria-hidden="true"></i>
+                                <h3 class="empty-title">
+                                    <span lang="es">No hay ponencias programadas actualmente</span>
+                                    <span lang="en">No upcoming talks scheduled currently</span>
+                                </h3>
+                                <p class="empty-subtitle">
+                                    <span lang="es">Estamos cocinando algo grande. ¡Vuelve pronto!</span>
+                                    <span lang="en">We are cooking something big. Check back soon!</span>
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    {% endfor %}
 
+                    {% else %}
+                        
+                        {% for ponencia in lista_ponencias %}
+                        <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
+                            <div class="lgx-about-content-area">
+                                <div class="lgx-heading">
+                                    <h2 class="heading">{{ ponencia.titulo }}</h2>
+                                    {% if ponencia.fecha %}
+                                    <h3 class="subheading" style="color: #6054bc; margin-top:10px;">{{ ponencia.fecha }}</h3>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="lgx-about-content">
+                                    <div class="text" style="text-align: justify;">
+                                        <span lang="es">{{ ponencia.descripcion | markdownify }}</span>
+                                        <span lang="en">
+                                            {% if ponencia.descripcion_en %}
+                                                {{ ponencia.descripcion_en | markdownify }}
+                                            {% else %}
+                                                {{ ponencia.descripcion | markdownify }}
+                                            {% endif %}
+                                        </span>
+                                    </div>
+
+                                    {% if ponencia.imagen %}
+                                    <div style="margin: 20px auto; max-width: 600px;">
+                                        <img src="{{ ponencia.imagen }}" alt="{{ ponencia.titulo }}" style="width: 100%; border-radius: 8px;">
+                                    </div>
+                                    {% endif %}
+
+                                    {% if ponencia.link %}
+                                    <a href="{{ ponencia.link }}" class="lgx-btn lgx-btn-primary" target="_blank" style="margin-top: 20px;">
+                                        <span><span lang="es">Más info</span><span lang="en">More info</span></span>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
