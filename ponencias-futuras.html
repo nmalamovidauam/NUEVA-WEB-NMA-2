@@ -2,22 +2,40 @@
 layout: null
 ---
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="es">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Selecciona tu Universidad - NMA</title>
-    
+    <title>Ponencias Futuras - NMA</title>
+
     <link rel="shortcut icon" href="assets/img/favicon/favicon.png"/>
+    
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/libs/maginificpopup/magnific-popup.css"/>
+    <link rel="stylesheet" href="assets/libs/timer/TimeCircles.css"/>
+    <link rel="stylesheet" href="assets/libs/owlcarousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="assets/libs/owlcarousel/owl.theme.default.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style-default.min.css"/>
+    <link rel="stylesheet" href="assets/css/popup.css"/>
     <link rel="stylesheet" href="assets/css/custom_style.css"/>
+
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        /* Fuerza que el menú tenga fondo oscuro siempre para que se vea igual que en otras páginas */
+        .lgx-header-position-fixed {
+            background-color: rgba(26, 26, 26, 0.95) !important;
+            position: relative !important;
+        }
+    </style>
 </head>
 
 <body class="inner-page"> 
+
+    <div class="lgx-container">
 
     <header>
         <div id="lgx-header" class="lgx-header">
@@ -29,7 +47,9 @@ layout: null
                                 <i class="fa fa-bars"></i>
                             </button>
                             <div class="lgx-logo">
-                                <a href="index.html"><img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA"></a>
+                                <a href="index.html">
+                                    <img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA">
+                                </a>
                             </div>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
@@ -172,15 +192,9 @@ layout: null
         </div>
     </footer>
 
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    </div> <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/language.script.js"></script>
-    
-    <script>
-      window.addEventListener("scroll", function() {
-        const header = document.querySelector(".lgx-header");
-        if (window.scrollY > 100) { header.classList.add("visible"); } else { header.classList.remove("visible"); }
-      });
-    </script>
+
 </body>
 </html>
