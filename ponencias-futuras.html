@@ -1,272 +1,186 @@
+---
+layout: null
+---
 <!doctype html>
 <html class="no-js">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-    <title>NMA – Nuestro mundo que se avecina</title>
-    <meta name="description" content="Conoce la historia y el propósito de NMA, así como a las personas que lo hacen posible."/>
-
-    <!-- FAVICON -->
+    <title>Selecciona tu Universidad - NMA</title>
+    
     <link rel="shortcut icon" href="assets/img/favicon/favicon.png"/>
-    <link rel="icon" href="assets/img/favicon/favicon.png"/>
-
-    <!-- CSS LIBRARIES -->
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="assets/libs/maginificpopup/magnific-popup.css"/>
-    <link rel="stylesheet" href="assets/libs/timer/TimeCircles.css"/>
-    <link rel="stylesheet" href="assets/libs/owlcarousel/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="assets/libs/owlcarousel/owl.theme.default.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900" rel="stylesheet"/>
-    
-    <!-- MASTER & CUSTOM STYLES -->
     <link rel="stylesheet" href="assets/css/style-default.min.css"/>
-    <link rel="stylesheet" href="assets/css/popup.css"/>
     <link rel="stylesheet" href="assets/css/custom_style.css"/>
-
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
-      <style>
-        /* Banner responsive */
-        @media (max-width: 768px) {
-            h2.title {
-                font-size: 4rem !important;
-            }
-        }
-    </style>
-    
 </head>
-<body class="sobre-nosotros">
-    <!-- Cookie Popup -->
-    <script src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-    <script>
-            window.start.init({Palette:"palette1",Mode:"banner bottom",Time:"5"});
-    </script>
 
-    <div class="lgx-container">       
+<body class="inner-page"> 
 
-<!--Banner Inner-->
-    <section>
-        <div class="lgx-banner lgx-banner-inner">
-            <div class="lgx-page-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                        
-                            </div>
-                        </div>
-                    </div><!--//.ROW-->
-                </div><!-- //.CONTAINER -->
-            </div><!-- //.INNER -->
-        </div>
-    </section> <!--//.Banner Inner-->          
-        
-<!-- HEADER -->
     <header>
         <div id="lgx-header" class="lgx-header">
             <div class="lgx-header-position lgx-header-position-white lgx-header-position-fixed">
                 <div class="lgx-container">
                     <nav class="navbar navbar-default lgx-navbar">
                         <div class="navbar-header">
-                                <button type="button" class="navbar-toggle visible-xs" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                    <i class="fa fa-bars"></i>
-                                </button>
-                                <div class="lgx-logo">
-                                    <a href="index.html">
-                                        <img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA">
-                                    </a>
-                                </div>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <div class="lgx-logo">
+                                <a href="index.html"><img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA"></a>
                             </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                              <ul class="nav navbar-nav lgx-nav navbar-right">
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav lgx-nav navbar-right">
                                 <li><a href="index.html"><span lang="es">Inicio</span><span lang="en">Home</span></a></li>
-                                <li><a href="sobre-nosotros.html" class="active"><span lang="es">Sobre Nosotros</span><span lang="en">About us</span></a></li>
+                                <li><a href="sobre-nosotros.html"><span lang="es">Sobre Nosotros</span><span lang="en">About us</span></a></li>
                                 <li><a href="ponencias-pasadas.html"><span lang="es">Ponencias Pasadas</span><span lang="en">Past Talks</span></a></li>
-                                <li><a href="ponencias-futuras.html"><span lang="es">Ponencias Futuras</span><span lang="en">Upcoming Talks</span></a></li>
+                                <li><a href="ponencias-futuras.html" class="active"><span lang="es">Ponencias Futuras</span><span lang="en">Upcoming Talks</span></a></li>
                                 <li><a href="sponsors.html"><span lang="es">Sponsors</span><span lang="en">Sponsors</span></a></li>
                                 <li><a href="contacto.html"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
-                                <li><a id="switch-lang" class="lgx-scroll" style="display:block; font-weight:bold; border-left:1px solid #fff;">
-                                    <span lang="es">Eng</span>
-                                    <span lang="en">Esp</span>
+                                <li><a id="switch-lang" class="lgx-scroll" style="display:block; font-weight:bold; border-left:1px solid #fff; cursor:pointer;">
+                                    <span lang="es">Eng</span><span lang="en">Esp</span>
                                 </a></li>
-                              </ul>   
-                            </div>
-                        </nav>
-                    </div>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
-        </header>
-      
-  <!-- MAIN CONTENT -->
-<main>
-    <section id="ponencias-futuras-select" class="lgx-section">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-xs-12">
-                    <div class="lgx-heading">
-                        <h2 class="heading">
-                            <span lang="es">Selecciona tu Universidad</span>
-                            <span lang="en">Select your University</span>
-                        </h2>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4">
-                    <a href="nma_uam.html" class="uni-card-link">
-                        <h3 class="uni-name">UAM</h3>
-                        <div class="uni-card-box">
-                            {% assign uam_count = site.data.futuras_uam.items | size %}
-                            {% if uam_count > 0 %}
-                                <span class="notification-badge">{{ uam_count }}</span>
-                            {% endif %}
-                            
-                            <img src="assets/img/expositor/Logo_UAM.png" alt="Logo UAM" class="uni-logo">
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-sm-4">
-                    <a href="nma_uc3m.html" class="uni-card-link">
-                        <h3 class="uni-name">UC3M</h3>
-                        <div class="uni-card-box">
-                            {% assign uc3m_count = site.data.futuras_uc3m.items | size %}
-                            {% if uc3m_count > 0 %}
-                                <span class="notification-badge">{{ uc3m_count }}</span>
-                            {% endif %}
-
-                            <img src="assets/img/expositor/Logo_UC3M.png" alt="Logo UC3M" class="uni-logo">
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xs-12 col-sm-4">
-                    <a href="nma_uab.html" class="uni-card-link">
-                        <h3 class="uni-name">UAB</h3>
-                        <div class="uni-card-box">
-                            {% assign uab_count = site.data.futuras_uab.items | size %}
-                            {% if uab_count > 0 %}
-                                <span class="notification-badge">{{ uab_count }}</span>
-                            {% endif %}
-
-                            <img src="assets/img/expositor/Logo_UAB.png" alt="Logo UAB" class="uni-logo">
-                        </div>
-                    </a>
-                </div>
-
-            </div> </div> </section>
-</main>
-
-    
-
-<!-- CONTACTO/FOOTER -->
-<footer id ="footer">
-    <div id="lgx-footer" class="lgx-footer"><!--lgx-footer-white-->
-        <div class="lgx-inner-footer" style="background-color: #6054bc;">
-            <div class="lgx-subscriber-area ">
-                <div class="container">
-                    <div class="lgx-subscriber-inner">  <!--lgx-subscriber-inner-indiv-->
-                        <h3 class="subscriber-title"><span lang="es">Únete para recibir noticias</span><span lang="en">Join to receive news</span></h3>
-                        <form class="lgx-subscribe-form" >
-                            <div class="form-group form-group-email">
-                                <input type="email" id="subscribe" placeholder="Enter your email Address  ..." class="form-control lgx-input-form form-control"/>
-                            </div>                           
-                            <div class="form-group form-group-submit">
-                                <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit"><span><span lang="es">Subscribirse</span><span lang="en">Subscribe</span></span></button>
-                            </div>
-                        </form> <!--//.SUBSCRIBE-->
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="lgx-footer-area">
-                    <div class="lgx-footer-single">
-                        <a class="logo" href="index.html"><img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA"> </a>
-                    </div> <!--//footer-area-->
-                    <div class="lgx-footer-single">
-                        <h3 class="footer-title"><span lang="es">Ubicaciones</span><span lang="en">Locations</span></h3>
-                        <address>
-                            <span lang="es">Universidad Autónoma de Madrid, España.<br> Universidad Carlos III de Madrid, España.<br>Univerisad Autónoma de Barcelona, España.</span>
-                            <span lang="en">Autonomous University of Madrid, Spain.<br> Carlos III University of Madrid, Spain.<br>Autonomous University of Barcelona, Spain.</span>
-                        </address>
-                    </div>
-                    <div class="lgx-footer-single">
-                        <h3 class="footer-title"><span lang="es">Redes Sociales</span><span lang="en">Social Media</span></h3>
-                        <p class="text">
-                            <span lang="es">Visita nuestras redes sociales</span>
-                            <span lang="en">Visit our social media</span>
-                        </p>
-                        <ul class="list-inline lgx-social-footer">
-                            <li><a href="https://twitter.com/NMA_Encuentro?s=20&t=2r5OyFwV4POOvH7iV25NEw" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.instagram.com/nmaencuentro/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.twitch.tv/nmamadrid/" aria-label="Twitch" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youtube.com/@NMA_Esp/" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                            <li><a href="https://es.linkedin.com/company/nuestro-mundo-que-se-avecina/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <p class="text">
-                            <span lang="es">nuestromundoqueseavecina@gmail.com</span>
-                            <span lang="es">nmalamovidauam@gmail.com</span>
-                        </p>
-
-                    </div>
-                    <!--<div class="lgx-footer-single">
-                        <h2 class="footer-title">Instagram Feed</h2>
-                        <div id="instafeed">
-                        </div>
-                    </div>-->
-                </div>
-                <!-- Modal-->
-                <div id="lgx-modal-map" class="modal fade lgx-modal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="lgxmapcanvas map-canvas-default" id="map_canvas"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- //.Modal-->
-
-                <div class="lgx-footer-bottom">
-                    <div class="lgx-copyright">
-                        <p> <span>©</span> 2025 <a href="http://www.themearth.com/">NMA</a>
-                            <span lang="es">Todos los derechos reservados </span>
-                            <span lang="en">All rights reserved</span></p>
-                    </div>
-                </div>
-
-            </div>
-            <!-- //.CONTAINER -->
         </div>
-        <!-- //.footer Middle -->
-    </div>
-</footer>
-<!--FOOTER END-->
+    </header>
 
-    <!-- SCRIPTS -->
+    <section>
+        <div class="lgx-banner lgx-banner-inner mi-banner-personalizado">
+            <div class="lgx-page-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="lgx-heading-area">
+                                <div class="lgx-heading lgx-heading-white">
+                                    <h2 class="heading">
+                                        <span lang="es">Selecciona tu Universidad</span>
+                                        <span lang="en">Select your University</span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uam.html" class="uni-card-link">
+                            <h3 class="uni-name">UAM</h3>
+                            <div class="uni-card-box">
+                                {% assign uam_count = site.data.futuras_uam.items | size %}
+                                {% if uam_count > 0 %}
+                                    <span class="notification-badge">{{ uam_count }}</span>
+                                {% endif %}
+                                <img src="assets/img/expositor/Logo_UAM.png" alt="Logo UAM" class="uni-logo">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uc3m.html" class="uni-card-link">
+                            <h3 class="uni-name">UC3M</h3>
+                            <div class="uni-card-box">
+                                {% assign uc3m_count = site.data.futuras_uc3m.items | size %}
+                                {% if uc3m_count > 0 %}
+                                    <span class="notification-badge">{{ uc3m_count }}</span>
+                                {% endif %}
+                                <img src="assets/img/expositor/Logo_UC3M.png" alt="Logo UC3M" class="uni-logo">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uab.html" class="uni-card-link">
+                            <h3 class="uni-name">UAB</h3>
+                            <div class="uni-card-box">
+                                {% assign uab_count = site.data.futuras_uab.items | size %}
+                                {% if uab_count > 0 %}
+                                    <span class="notification-badge">{{ uab_count }}</span>
+                                {% endif %}
+                                <img src="assets/img/expositor/Logo_UAB.png" alt="Logo UAB" class="uni-logo">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id ="footer">
+        <div id="lgx-footer" class="lgx-footer">
+            <div class="lgx-inner-footer" style="background-color: #6054bc;">
+                <div class="lgx-subscriber-area ">
+                    <div class="container">
+                        <div class="lgx-subscriber-inner">
+                            <h3 class="subscriber-title"><span lang="es">Únete para recibir noticias</span><span lang="en">Join to receive news</span></h3>
+                            <form class="lgx-subscribe-form" >
+                                <div class="form-group form-group-email">
+                                    <input type="email" id="subscribe" placeholder="Enter your email Address..." class="form-control lgx-input-form form-control"/>
+                                </div>                            
+                                <div class="form-group form-group-submit">
+                                    <button type="submit" name="lgx-submit" id="lgx-submit" class="lgx-btn lgx-submit"><span><span lang="es">Subscribirse</span><span lang="en">Subscribe</span></span></button>
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="lgx-footer-area">
+                        <div class="lgx-footer-single">
+                            <a class="logo" href="index.html"><img src="assets/img/NMA LOGO Blanco.png" alt="Logo NMA"> </a>
+                        </div>
+                        <div class="lgx-footer-single">
+                            <h3 class="footer-title"><span lang="es">Ubicaciones</span><span lang="en">Locations</span></h3>
+                            <address>
+                                <span lang="es">Universidad Autónoma de Madrid<br> Universidad Carlos III de Madrid<br>Univerisad Autónoma de Barcelona</span>
+                                <span lang="en">Autonomous University of Madrid<br> Carlos III University of Madrid<br>Autonomous University of Barcelona</span>
+                            </address>
+                        </div>
+                        <div class="lgx-footer-single">
+                            <h3 class="footer-title"><span lang="es">Redes Sociales</span><span lang="en">Social Media</span></h3>
+                            <ul class="list-inline lgx-social-footer">
+                                <li><a href="https://twitter.com/NMA_Encuentro" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/nmaencuentro/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@NMA_Esp/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://es.linkedin.com/company/nuestro-mundo-que-se-avecina/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                            <p class="text">nuestromundoqueseavecina@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="lgx-footer-bottom">
+                        <div class="lgx-copyright">
+                            <p> <span>©</span> 2025 NMA. <span lang="es">Todos los derechos reservados</span><span lang="en">All rights reserved</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/libs/jquery.validate.js"></script>
-    <script src="assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/libs/header-parallax.js"></script>
-    <script src="assets/js/custom.script.js"></script>
-    <script src="assets/js/popup.js"></script>
     <script src="assets/js/language.script.js"></script>
-
-<script>
-  window.addEventListener("scroll", function() {
-    const header = document.querySelector(".lgx-header");
-    if (window.scrollY > 100) { // aparece después de 100px de scroll
-      header.classList.add("visible");
-    } else {
-      header.classList.remove("visible");
-    }
-  });
-</script>    
     
+    <script>
+      window.addEventListener("scroll", function() {
+        const header = document.querySelector(".lgx-header");
+        if (window.scrollY > 100) { header.classList.add("visible"); } else { header.classList.remove("visible"); }
+      });
+    </script>
 </body>
 </html>
