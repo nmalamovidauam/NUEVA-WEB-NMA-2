@@ -2,15 +2,17 @@
 layout: null
 ---
 <!doctype html>
-<html class="no-js" lang="es">
+<html class="no-js">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    
-    <title>Ponencias Futuras - NMA</title>
+
+    <title>Selecciona tu Universidad - NMA</title>
+    <meta name="description" content="Selecciona tu universidad para ver las próximas ponencias."/>
 
     <link rel="shortcut icon" href="assets/img/favicon/favicon.png"/>
+    <link rel="icon" href="assets/img/favicon/favicon.png"/>
 
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/libs/fontawesome/css/font-awesome.min.css"/>
@@ -19,6 +21,7 @@ layout: null
     <link rel="stylesheet" href="assets/libs/owlcarousel/owl.carousel.min.css"/>
     <link rel="stylesheet" href="assets/libs/owlcarousel/owl.theme.default.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="assets/css/style-default.min.css"/>
     <link rel="stylesheet" href="assets/css/popup.css"/>
     <link rel="stylesheet" href="assets/css/custom_style.css"/>
@@ -26,20 +29,14 @@ layout: null
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-        /* Forzar que las imágenes de los logos no sean gigantes */
-        .uni-card-box img {
-            max-width: 150px !important; /* Límite de tamaño para que no se vean enormes */
-            width: auto !important;
-            margin: 0 auto;
-        }
-        
+        /* Ajuste para móvil */
         @media (max-width: 768px) {
-            h2.title { font-size: 3rem !important; }
+            h2.title { font-size: 4rem !important; }
         }
     </style>
 </head>
 
-<body class="inner-page"> 
+<body class="inner-page">
 
     <script src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
     <script>
@@ -110,7 +107,7 @@ layout: null
                     
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uam.html" class="uni-card-link">
-                            <h3 class="uni-name"><span lang="es">UAM</span><span lang="en">UAM</span></h3>
+                            <h3 class="uni-name">UAM</h3>
                             <div class="uni-card-box">
                                 {% assign uam_count = site.data.futuras_uam.items | size %}
                                 {% if uam_count > 0 %}
@@ -123,7 +120,7 @@ layout: null
 
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uc3m.html" class="uni-card-link">
-                            <h3 class="uni-name"><span lang="es">UC3M</span><span lang="en">UC3M</span></h3>
+                            <h3 class="uni-name">UC3M</h3>
                             <div class="uni-card-box">
                                 {% assign uc3m_count = site.data.futuras_uc3m.items | size %}
                                 {% if uc3m_count > 0 %}
@@ -136,7 +133,7 @@ layout: null
 
                     <div class="col-xs-12 col-sm-4">
                         <a href="nma_uab.html" class="uni-card-link">
-                            <h3 class="uni-name"><span lang="es">UAB</span><span lang="en">UAB</span></h3>
+                            <h3 class="uni-name">UAB</h3>
                             <div class="uni-card-box">
                                 {% assign uab_count = site.data.futuras_uab.items | size %}
                                 {% if uab_count > 0 %}
@@ -147,7 +144,9 @@ layout: null
                         </a>
                     </div>
 
-                </div> </div> </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer id ="footer">
@@ -185,6 +184,7 @@ layout: null
                             <ul class="list-inline lgx-social-footer">
                                 <li><a href="https://twitter.com/NMA_Encuentro" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.instagram.com/nmaencuentro/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.twitch.tv/nmamadrid/" target="_blank"><i class="fa fa-twitch"></i></a></li>
                                 <li><a href="https://www.youtube.com/@NMA_Esp/" target="_blank"><i class="fa fa-youtube"></i></a></li>
                                 <li><a href="https://es.linkedin.com/company/nuestro-mundo-que-se-avecina/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
@@ -206,13 +206,18 @@ layout: null
 
     </div> <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/libs/jquery.validate.js"></script>
+    <script src="assets/libs/maginificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/libs/header-parallax.js"></script>
+    <script src="assets/js/custom.script.js"></script>
+    <script src="assets/js/popup.js"></script>
     <script src="assets/js/language.script.js"></script>
 
     <script>
       window.addEventListener("scroll", function() {
         const header = document.querySelector(".lgx-header");
         if (window.scrollY > 100) { 
-            header.classList.add("visible"); // Esto activa el fondo oscuro SOLO al bajar
+            header.classList.add("visible"); 
         } else { 
             header.classList.remove("visible"); 
         }
