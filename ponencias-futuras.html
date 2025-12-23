@@ -101,41 +101,62 @@
       
   <!-- MAIN CONTENT -->
 <main>
-    
-  <section id="sobre-nosotros" class="lgx-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
-          <div class="lgx-about-content-area about-text">
-            <div class="lgx-heading">
-              <h2 class="heading">
-                <span lang="es">Contacto</span>
-                <span lang="en">Contact</span>
-              </h2>
-            </div>
-            <!-- Texto -->
-            <div>
-              <!-- Español -->
-              <p lang="es">
-                Actualmente esta página se encuentra en preparación.
-              </p>
-              <p lang="es">
-                Esperamos que esté acabada pronto, ¡gracias por su paciencia!
-              </p>
+    <section id="ponencias-futuras-select" class="lgx-section">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-12">
+                    <div class="lgx-heading">
+                        <h2 class="heading">
+                            <span lang="es">Selecciona tu Universidad</span>
+                            <span lang="en">Select your University</span>
+                        </h2>
+                    </div>
+                </div>
 
-              <!-- Inglés -->
-              <p lang="en">
-                This page is currently being prepared.
-              </p>
-              <p lang="en">
-                We hope to complete it soon, thanks for your patience!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="nma_uam.html" class="uni-card-link">
+                        <h3 class="uni-name">UAM</h3>
+                        <div class="uni-card-box">
+                            {% assign uam_count = site.data.futuras_uam.items | size %}
+                            {% if uam_count > 0 %}
+                                <span class="notification-badge">{{ uam_count }}</span>
+                            {% endif %}
+                            
+                            <img src="assets/img/expositor/Logo_UAM.png" alt="Logo UAM" class="uni-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <a href="nma_uc3m.html" class="uni-card-link">
+                        <h3 class="uni-name">UC3M</h3>
+                        <div class="uni-card-box">
+                            {% assign uc3m_count = site.data.futuras_uc3m.items | size %}
+                            {% if uc3m_count > 0 %}
+                                <span class="notification-badge">{{ uc3m_count }}</span>
+                            {% endif %}
+
+                            <img src="assets/img/expositor/Logo_UC3M.png" alt="Logo UC3M" class="uni-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <a href="nma_uab.html" class="uni-card-link">
+                        <h3 class="uni-name">UAB</h3>
+                        <div class="uni-card-box">
+                            {% assign uab_count = site.data.futuras_uab.items | size %}
+                            {% if uab_count > 0 %}
+                                <span class="notification-badge">{{ uab_count }}</span>
+                            {% endif %}
+
+                            <img src="assets/img/expositor/Logo_UAB.png" alt="Logo UAB" class="uni-logo">
+                        </div>
+                    </a>
+                </div>
+
+            </div> </div> </section>
 </main>
 
     
