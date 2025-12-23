@@ -687,3 +687,32 @@ section h2, section p, section span {
 .uni-card-link:hover .uni-name {
     color: #6054bc;
 }
+
+/* --- ESTILO MENSAJE "NO HAY PONENCIAS" --- */
+.empty-state-box {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 2px dashed #ddd; /* Borde discontinuo elegante */
+    margin-top: 20px;
+}
+
+.empty-state-box i {
+    font-size: 50px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.empty-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.empty-subtitle {
+    color: #777;
+    font-size: 16px;
+}
