@@ -28,7 +28,7 @@ collections:
         label: "Futuras UAM"
         file: "_data/futuras_uam.yml"
         fields:
-          - label: "Lista UAM"
+          - label: "Futuras UAM"
             name: "items"
             widget: "list"
             fields:
@@ -43,7 +43,7 @@ collections:
         label: "Futuras UC3M"
         file: "_data/futuras_uc3m.yml"
         fields:
-          - label: "Lista UC3M"
+          - label: "Futuras UC3M"
             name: "items"
             widget: "list"
             fields:
@@ -58,7 +58,7 @@ collections:
         label: "Futuras UAB"
         file: "_data/futuras_uab.yml"
         fields:
-          - label: "Lista UAB"
+          - label: "Futuras UAB"
             name: "items"
             widget: "list"
             fields:
@@ -68,3 +68,49 @@ collections:
               - {label: "Descripción", name: "descripcion", widget: "text"}
               - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
+
+      - name: "pasadas_uab"
+        label: "Pasadas UAB"
+        file: "_data/pasadas_uab.yml"
+        fields:
+          - label: "Pasadas UAB"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Fecha", name: "fecha", widget: "string", required: false}
+              - {label: "Imagen", name: "imagen", widget: "image", required: false}
+              - {label: "Descripción", name: "descripcion", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
+              - {label: "Enlace", name: "link", widget: "string", required: false}
+
+      - name: "pasadas_uc3m"
+        label: "Pasadas UC3M"
+        file: "_data/pasadas_uc3m.yml"
+        fields:
+          - label: "Pasadas UC3M"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Fecha", name: "fecha", widget: "string", required: false}
+              - {label: "Imagen", name: "imagen", widget: "image", required: false}
+              - {label: "Descripción", name: "descripcion", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
+              - {label: "Enlace", name: "link", widget: "string", required: false}
+
+      - name: "pasadas_uam"
+        label: "Pasadas UAM"
+        file: "_data/pasadas_uam.yml"
+        fields:
+          - label: "Pasadas UAM"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Fecha", name: "fecha", widget: "string", required: false}
+              - {label: "Imagen", name: "imagen", widget: "image", required: false}
+              - {label: "Descripción", name: "descripcion", widget: "text"}
+              - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
+              - {label: "Enlace", name: "link", widget: "string", required: false}
+      
