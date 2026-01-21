@@ -132,57 +132,48 @@ layout: null
         <!--BANNER END-->
 
     <!-- PONENCIAS PASADAS -->
-    <section id="ponencias-pasadas">
+<section id="ponencias-pasadas">
     <div id="lgx-past-talks" class="lgx-past-talks">
         <div class="lgx-inner">
             <div class="container">
                 <div class="row">
-
                     <div class="col-xs-12">
                         <div class="lgx-heading">
                             <h2 class="heading">
                                 <span lang="es">Ponencias Pasadas</span>
                                 <span lang="en">Past Talks</span>
                             </h2>
+                            <p class="subheading">
+                                <span lang="es">Selecciona tu universidad para ver los eventos pasados</span>
+                                <span lang="en">Select your university to see past events</span>
+                            </p>
                         </div>
                     </div>
-                    
-                    {% for ponencia in site.data.ponencias_pasadas.items %}
-                    <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
-                        <div class="lgx-about-content-area">
-                            <div class="lgx-heading">
-                                <h2 class="heading">{{ ponencia.titulo }}</h2>
-                                <h3 class="subheading" style="color: #6054bc; margin-top:10px;">{{ ponencia.fecha }}</h3>
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uam_pasadas.html" class="uni-card-link">
+                            <h3 class="uni-name">UAM</h3>
+                            <div class="uni-card-box">
+                                <img src="assets/img/expositor/Logo_UAM.png" alt="Logo UAM" class="uni-logo">
                             </div>
-                            <div class="lgx-about-content">
-                                
-                                <div class="text">
-                                    <span lang="es">
-                                        {{ ponencia.descripcion | markdownify }}
-                                    </span>
-                                    <span lang="en">
-                                        {% if ponencia.descripcion_en %}
-                                            {{ ponencia.descripcion_en | markdownify }}
-                                        {% else %}
-                                            {{ ponencia.descripcion | markdownify }}
-                                        {% endif %}
-                                    </span>
-                                </div>
-
-                                {% if ponencia.imagen %}
-                                <div style="margin: 20px auto; max-width: 600px;">
-                                    <img src="{{ ponencia.imagen }}" alt="{{ ponencia.titulo }}" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                                </div>
-                                {% endif %}
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                    {% endfor %}
-                    
-                </div> 
-            </div> 
-        </div> 
-    </div> 
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uc3m_pasadas.html" class="uni-card-link">
+                            <h3 class="uni-name">UC3M</h3>
+                            <div class="uni-card-box">
+                                <img src="assets/img/expositor/Logo_UC3M.png" alt="Logo UC3M" class="uni-logo">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="nma_uab_pasadas.html" class="uni-card-link">
+                            <h3 class="uni-name">UAB</h3>
+                            <div class="uni-card-box">
+                                <img src="assets/img/expositor/Logo_UAB.png" alt="Logo UAB" class="uni-logo">
+                            </div>
+                        </a>
+                    </div>
+                </div> </div> </div> </div>       
 </section>
 
 <!-- PONENCIAS FUTURAS -->
