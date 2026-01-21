@@ -716,3 +716,22 @@ section h2, section p, section span {
     color: #777;
     font-size: 16px;
 }
+
+/* Estilos para las pestañas (Tabs) */
+.lgx-tab2 .nav-pills li a p { 
+    font-size: 1.4rem; 
+    line-height: 2.1rem; 
+    font-weight: 300; 
+    margin: 0px; 
+    color: #e0e0e0; 
+    opacity: 0.7; 
+} 
+
+.lgx-tab2 .nav-pills li.active a p { 
+    font-size: 1.4rem; 
+    line-height: 2.1rem; 
+    font-weight: 300; 
+    margin: 0px; 
+    color: #ffffff; 
+    opacity: 0.7; 
+}
