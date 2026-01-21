@@ -104,13 +104,15 @@ layout: null
                 <div class="row">
                     
                     {% assign lista_ponencias = site.data.pasadas_uam.items %}
-                    
-                    {% if lista_ponencias == null or lista_ponencias.size == 0 %}
 
+                    {% if lista_ponencias == null or lista_ponencias.size == 0 %}
+                    
                     {% else %}
-                        
-                        {% for ponencia in lista_ponencias %}
-                        <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
+                    
+                    <div class="col-xs-12" style="height: 100px;"></div>
+                    
+                    {% for ponencia in lista_ponencias %}
+                    <div class="col-sm-12 col-md-12" style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">        
                             <div class="lgx-about-content-area">
                                 <div class="lgx-heading">
                                     <h2 class="heading">{{ ponencia.titulo }}</h2>
