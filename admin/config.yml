@@ -28,7 +28,7 @@ collections:
         label: "Futuras UAM"
         file: "_data/futuras_uam.yml"
         fields:
-          - label: "Futuras UAM"
+          - label: "Lista Futuras UAM"
             name: "items"
             widget: "list"
             fields:
@@ -43,7 +43,7 @@ collections:
         label: "Futuras UC3M"
         file: "_data/futuras_uc3m.yml"
         fields:
-          - label: "Futuras UC3M"
+          - label: "Lista Futuras UC3M"
             name: "items"
             widget: "list"
             fields:
@@ -58,7 +58,7 @@ collections:
         label: "Futuras UAB"
         file: "_data/futuras_uab.yml"
         fields:
-          - label: "Futuras UAB"
+          - label: "Lista Futuras UAB"
             name: "items"
             widget: "list"
             fields:
@@ -73,7 +73,7 @@ collections:
         label: "Pasadas UAB"
         file: "_data/pasadas_uab.yml"
         fields:
-          - label: "Pasadas UAB"
+          - label: "Lista Pasadas UAB"
             name: "items"
             widget: "list"
             fields:
@@ -88,7 +88,7 @@ collections:
         label: "Pasadas UC3M"
         file: "_data/pasadas_uc3m.yml"
         fields:
-          - label: "Pasadas UC3M"
+          - label: "Lista Pasadas UC3M"
             name: "items"
             widget: "list"
             fields:
@@ -103,7 +103,7 @@ collections:
         label: "Pasadas UAM"
         file: "_data/pasadas_uam.yml"
         fields:
-          - label: "Pasadas UAM"
+          - label: "Lista Pasadas UAM"
             name: "items"
             widget: "list"
             fields:
@@ -113,4 +113,3 @@ collections:
               - {label: "Descripción", name: "descripcion", widget: "text"}
               - {label: "Descripción (Inglés)", name: "descripcion_en", widget: "text", required: false}
               - {label: "Enlace", name: "link", widget: "string", required: false}
-      
