@@ -735,3 +735,27 @@ section h2, section p, section span {
     color: #ffffff; 
     opacity: 0.7; 
 }
+
+/* =========================================
+   FORZAR CENTRADO DE IMÁGENES (PONENCIAS)
+   ========================================= */
+
+/* 1. Centra las imágenes dentro de las secciones de ponencias */
+#ponencias-pasadas img,
+#ponencias-futuras img,
+.lgx-single-news img,   /* Clase típica de las tarjetas de noticias/ponencias */
+.lgx-news-img img {
+    display: block !important;       /* Las convierte en bloques (como cajas) */
+    margin-left: auto !important;    /* Relleno automático a la izquierda */
+    margin-right: auto !important;   /* Relleno automático a la derecha */
+    max-width: 100% !important;      /* Que no se salgan del ancho del móvil */
+    height: auto !important;         /* Que mantengan la proporción */
+}
+
+/* 2. Si las fotos están dentro de una tarjeta (Card) */
+.lgx-news-single .lgx-news-img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
