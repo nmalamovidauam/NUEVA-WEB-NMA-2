@@ -759,3 +759,12 @@ section h2, section p, section span {
     align-items: center !important;
     width: 100% !important;
 }
+
+/* =========================================
+   MARGEN PARA LOS BOTONES DE UNIVERSIDAD
+   ========================================= */
+
+.uni-card-link {
+    display: block !important;      /* Asegura que la caja se comporte como un bloque */
+    margin-bottom: 80px !important; /* <--- AQUÍ ESTÁ EL ESPACIO EXTRA */
+}
