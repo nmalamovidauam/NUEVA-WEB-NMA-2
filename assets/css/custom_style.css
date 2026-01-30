@@ -793,30 +793,3 @@ section h2, section p, section span {
 .uni-card-link {
     text-align: center !important;
 }
-
-/* =================================================
-   SOLUCIÓN NUCLEAR: FORZAR ALTURA AUTOMÁTICA EN TODO
-   ================================================= */
-
-/* 1. Ataca a CUALQUIER sección de contenido en toda la web */
-section.lgx-section {
-    min-height: 0 !important;      /* Mata el 100vh */
-    height: auto !important;       /* Altura real del texto */
-    display: block !important;     /* Quita el flexbox que centra verticalmente */
-    padding-top: 50px !important;  /* Relleno estándar arriba */
-    padding-bottom: 50px !important; /* Relleno estándar abajo */
-}
-
-/* 2. Arregla el Banner superior (por si acaso también es gigante) */
-.lgx-banner-inner {
-    height: auto !important;
-    min-height: 300px !important;  /* Altura fija controlada para el título */
-    padding-top: 150px !important;
-    padding-bottom: 50px !important;
-}
-
-/* 3. Asegura que el footer no flote */
-footer#footer {
-    margin-top: 0 !important;
-    position: relative !important;
-}
