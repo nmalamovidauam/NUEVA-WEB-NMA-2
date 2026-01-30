@@ -768,3 +768,28 @@ section h2, section p, section span {
     display: block !important;      /* Asegura que la caja se comporte como un bloque */
     margin-bottom: 80px !important; /* <--- AQUÍ ESTÁ EL ESPACIO EXTRA */
 }
+
+/* =========================================
+   FUERZA BRUTA DE CENTRADO DE TEXTOS
+   ========================================= */
+
+/* Obliga a centrarse a TODOS los títulos y textos dentro de las secciones */
+#ponencias-pasadas h1, 
+#ponencias-pasadas h2, 
+#ponencias-pasadas h3,   /* <--- ESTE ES EL CLAVE (UAM, UC3M...) */
+#ponencias-pasadas h4, 
+#ponencias-pasadas h5, 
+#ponencias-pasadas h6, 
+#ponencias-pasadas p, 
+#ponencias-pasadas span,
+.uni-name {
+    text-align: center !important;
+    width: 100% !important;        /* Asegura que ocupen todo el ancho para poder centrarse */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Y por si acaso, aseguramos el contenedor de la tarjeta */
+.uni-card-link {
+    text-align: center !important;
+}
