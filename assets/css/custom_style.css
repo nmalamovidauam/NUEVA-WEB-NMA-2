@@ -759,3 +759,11 @@ section h2, section p, section span {
     align-items: center !important;
     width: 100% !important;
 }
+
+/* Margen abajo para CUALQUIER imagen dentro de un párrafo en toda la web */
+p img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 60px !important; /* <--- AQUÍ ESTÁ EL ESPACIO */
+}
