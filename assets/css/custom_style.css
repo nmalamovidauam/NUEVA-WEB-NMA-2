@@ -793,3 +793,29 @@ section h2, section p, section span {
 .uni-card-link {
     text-align: center !important;
 }
+
+/* =========================================
+   ARREGLO MAESTRO DE ESPACIOS (AUTO-ALTURA)
+   Aplica a: Sobre Nosotros, Sponsors, Contacto y Apóyanos
+   ========================================= */
+
+#sobre-nosotros,  /* Página Sobre Nosotros */
+#sponsors,        /* Página Sponsors (sección principal) */
+#contacto,        /* Página Contacto */
+#apoyanos         /* Página Sponsors (sección donaciones) */
+{
+    min-height: auto !important;     /* IMPORTANTE: Desactiva la altura de pantalla completa */
+    height: auto !important;         /* La altura se ajusta al contenido real */
+    display: block !important;       /* Desactiva el forzado vertical flexible */
+    
+    /* Márgenes limpios para que respire bien */
+    padding-top: 80px !important;    
+    padding-bottom: 80px !important; 
+}
+
+/* Opcional: Centrar el texto en móviles si se ve raro */
+#sponsors p, 
+#contacto p, 
+#apoyanos p {
+    margin-bottom: 20px !important; /* Un poco de separación entre párrafos */
+}
