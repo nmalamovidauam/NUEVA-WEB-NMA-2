@@ -811,7 +811,7 @@ section h2, section p, section span {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6) !important; /* Tu color corporativo semitransparente */
+    background: rgba(0, 0, 0, 0) !important; /* Tu color corporativo semitransparente */
     z-index: 0;
 }
 
