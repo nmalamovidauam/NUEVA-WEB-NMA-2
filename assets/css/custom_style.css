@@ -793,3 +793,38 @@ section h2, section p, section span {
 .uni-card-link {
     text-align: center !important;
 }
+
+/* =======================================================
+   CLASE MAESTRA: FONDO CORPORATIVO (Solo para Banner y Footer)
+   ======================================================= */
+.nma-bg-branding {
+    background: url("../img/COLORES-NMA.png") center center no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important; /* Efecto elegante */
+    position: relative;
+    color: #ffffff !important; /* Texto blanco forzado */
+}
+
+/* El filtro verde/azulado encima de la foto */
+.nma-bg-branding::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(22, 160, 134, 0.9); /* Tu color corporativo semitransparente */
+    z-index: 0;
+}
+
+/* Asegurar que el texto se vea encima del filtro */
+.nma-bg-branding > div, 
+.nma-bg-branding .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Forzar títulos blancos dentro de estas zonas */
+.nma-bg-branding h2, 
+.nma-bg-branding p, 
+.nma-bg-branding a {
+    color: #ffffff !important;
+}
