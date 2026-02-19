@@ -837,3 +837,32 @@ section h2, section p, section span {
 .lgx-inner-footer address {
     color: #ffffff !important;
 }
+
+/* =======================================================
+   ARREGLO DE LOS BOTONES DE REDES SOCIALES EN EL FOOTER
+   (VISIBLES POR DEFECTO)
+   ======================================================= */
+
+/* 1. Estado normal del botón (Tu verde corporativo fijo) */
+.lgx-inner-footer .lgx-social-footer li a {
+    background-color: #16a086 !important; /* Fondo verde sólido siempre */
+    border: 1px solid #16a086 !important; /* Borde verde sólido */
+    border-radius: 50% !important; /* Redondos (opcional, suele quedar mejor) */
+    opacity: 1 !important; /* Sin transparencias para que destaquen al 100% */
+}
+
+/* Forzamos el logo a color blanco */
+.lgx-inner-footer .lgx-social-footer li a i {
+    color: #ffffff !important; 
+}
+
+/* 2. Estado al pasar el ratón (Efecto inverso) */
+.lgx-inner-footer .lgx-social-footer li a:hover {
+    background-color: #ffffff !important; /* El fondo se vuelve blanco */
+    border-color: #ffffff !important; /* El borde se vuelve blanco */
+}
+
+/* El logo pasa a ser verde corporativo al pasar el ratón */
+.lgx-inner-footer .lgx-social-footer li a:hover i {
+    color: #16a086 !important; 
+}
