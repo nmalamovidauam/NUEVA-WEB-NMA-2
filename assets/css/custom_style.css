@@ -866,3 +866,18 @@ section h2, section p, section span {
 .lgx-inner-footer .lgx-social-footer li a:hover i {
     color: #16a086 !important; 
 }
+
+/* =======================================================
+   ENLACES DE TEXTO DEL FOOTER (Correos en color blanco siempre)
+   ======================================================= */
+.lgx-inner-footer p.text a {
+    color: #ffffff !important; /* Color blanco normal */
+    text-decoration: none !important; /* Sin subrayado por defecto (opcional) */
+    transition: all 0.3s ease; /* Efecto suave */
+}
+
+.lgx-inner-footer p.text a:hover {
+    color: #ffffff !important; /* Se mantiene blanco al pasar el ratón */
+    text-decoration: underline !important; /* Solo se subraya para que se note que es clickeable */
+    opacity: 0.8; /* Se vuelve un pelín transparente para hacer un efecto elegante sin usar verde */
+}
