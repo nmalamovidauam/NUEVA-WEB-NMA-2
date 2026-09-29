@@ -142,6 +142,7 @@
                                     Buscamos conectar con jóvenes inquietos que busquen formarse profesionalmente, intercambiando opiniones y puntos de vista. Si crees que eres uno de ellos, ¡no dudes en participar con nosotros!
                                 </p>
 
+                                <!-- Cierre del texto en inglés -->
                                 <div lang="en" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
                                     <p>
                                         NMA is a youth-oriented organization that seeks to inspire curiosity and critical thinking among young people through various activities that foster the healthy exchange of ideas and encourage new ambitions to improve society as a whole across different fields of action.
@@ -156,9 +157,12 @@
                                         We aim to connect with curious young individuals who wish to grow professionally while exchanging opinions and perspectives. If you believe you are one of them, don’t hesitate to join us!
                                     </p>
                                 </div>
-                              
+                            </div> <!-- Cierre correcto de lgx-text-content -->
+                        </div> <!-- Cierre correcto de col-md-8 -->
+
+                        <!-- TÍTULO DE NUESTRO EQUIPO -->
                         <div class="col-xs-12">
-                            <div class="lgx-heading" style="text-align: center; margin-bottom: 40px; margin-top: 0;">
+                            <div class="lgx-heading" style="text-align: center; margin-bottom: 40px; margin-top: 40px;">
                                 <h2 class="heading">
                                     <span lang="es">Nuestro Equipo</span>
                                     <span lang="en">Our Team</span>
@@ -166,20 +170,45 @@
                             </div>
                         </div>
 
-                      <div class="col-xs-12 col-sm-4">
-                        <a href="https://es.linkedin.com/in/pablo-ballesteros-cumbreño-74297628b" class="uni-card-link" style="max-width: 350px; margin: 0 auto; display: block;">
-                            <h3 class="uni-name">Pablo Ballesteros Cumbreño</h3>
-                            <div class="uni-card-box">
-                                <img src="assets/img/expositor/gorrino.jpeg" alt="PBC" class="uni-logo">
+                        <!-- FILA DE MIEMBROS DEL EQUIPO -->
+                        <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                            
+                            <!-- MIEMBRO 1 (Izquierda) -->
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="https://kr.linkedin.com/in/pablo-postigo-pich-aguilera-76b380266" class="uni-card-link" style="max-width: 350px; margin: 0 auto 30px; display: block; text-align: center;">
+                                    <h3 class="uni-name">Pablo Postigo Pich-Aguilera</h3>
+                                    <div class="uni-card-box">
+                                        <img src="assets/img/expositor/PPP.png" alt="PPP" class="uni-logo" style="width: 100%; max-width: 250px; border-radius: 8px;">
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
+                            <!-- MIEMBRO 2 (Centro) -->
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="https://es.linkedin.com/in/pablo-ballesteros-cumbreño-74297628b" class="uni-card-link" style="max-width: 350px; margin: 0 auto 30px; display: block; text-align: center;">
+                                    <h3 class="uni-name">Pablo Ballesteros Cumbreño</h3>
+                                    <div class="uni-card-box">
+                                        <img src="assets/img/expositor/PBC.png" alt="PBC" class="uni-logo" style="width: 100%; max-width: 250px; border-radius: 8px;">
+                                    </div>
+                                </a>
                             </div>
-                        </div>
 
-                    </div> 
-                </div> 
+                            <!-- MIEMBRO 3 (Derecha) -->
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="https://es.linkedin.com/in/víctor-correa-nieves-110aaa300" class="uni-card-link" style="max-width: 350px; margin: 0 auto 30px; display: block; text-align: center;">
+                                    <h3 class="uni-name">Víctor Correa Nieves</h3>
+                                    <div class="uni-card-box">
+                                        <img src="assets/img/expositor/VCN.png" alt="VCN" class="uni-logo" style="width: 100%; max-width: 250px; border-radius: 8px;">
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Si necesitas añadir un 4º, 5º o 6º miembro, solo tienes que copiar y pegar uno de los bloques "<div class="col-xs-12 col-sm-4">...</div>" aquí abajo. Automáticamente saltarán a la siguiente fila gracias al "flex-wrap: wrap;". -->
+
+                        </div> <!-- Cierre de la fila de miembros -->
+
+                    </div> <!-- Cierre del row principal -->
+                </div> <!-- Cierre del container -->
             </div> 
         </div>
     </section>
