@@ -930,3 +930,30 @@ section h2, section p, section span {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important; /* Proyecta una sombra elegante */
 }
 
+/* Rescate: Devolver los logos de las universidades a la normalidad */
+.lgx-select-uni .uni-card-box {
+    border: 2px solid #6054bc !important;
+    border-radius: 15px !important;
+    background-color: #ffffff !important;
+    padding-top: 100% !important;
+    display: block !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+}
+
+.lgx-select-uni .uni-logo {
+    position: absolute !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 70% !important;
+    max-height: 70% !important;
+    border-radius: 0 !important;      /* Elimina el formato circular */
+    object-fit: contain !important;   /* Evita que los logos se deformen o estiren */
+    top: 0 !important; 
+    left: 0 !important; 
+    bottom: 0 !important; 
+    right: 0 !important;
+    margin: auto !important;
+    display: block !important;
+}
+
+
