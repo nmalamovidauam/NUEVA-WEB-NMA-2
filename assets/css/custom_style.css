@@ -881,3 +881,31 @@ section h2, section p, section span {
     text-decoration: underline !important; /* Solo se subraya para que se note que es clickeable */
     opacity: 0.8; /* Se vuelve un pelín transparente para hacer un efecto elegante sin usar verde */
 }
+
+.contenedor-padre {
+    display: flex !important;
+    flex-direction: row !important;      /* Coloca los perfiles horizontalmente */
+    justify-content: center !important;  /* Centra todo el bloque en la pantalla */
+    gap: 60px !important;                /* Espacio de separación entre cada perfil */
+    padding: 40px 20px !important;       /* Separa el contenido de los bordes de la pantalla */
+    flex-wrap: wrap !important;          /* Permite que pasen a la siguiente línea en móviles */
+}
+
+.tarjeta-perfil {
+    border: none !important;             /* Elimina el borde visible */
+    background: transparent !important;  /* Quita cualquier fondo blanco o gris */
+    box-shadow: none !important;         /* Elimina sombras */
+    padding: 0 !important;               
+    text-align: center !important;       /* Mantiene el nombre centrado bajo la foto */
+}
+
+.tarjeta-perfil img {
+    width: 200px !important;             /* Ajusta este valor según el tamaño que busques */
+    height: 200px !important;            /* Debe ser idéntico al width */
+    border-radius: 50% !important;       /* Convierte la imagen en un círculo perfecto */
+    object-fit: cover !important;        /* Garantiza que la foto no se estire ni se deforme */
+    border: none !important;
+    margin: 0 auto 20px auto !important; /* Centra la foto y deja espacio antes del nombre */
+}
+
+
