@@ -882,30 +882,41 @@ section h2, section p, section span {
     opacity: 0.8; /* Se vuelve un pelín transparente para hacer un efecto elegante sin usar verde */
 }
 
-.contenedor-padre {
-    display: flex !important;
-    flex-direction: row !important;      /* Coloca los perfiles horizontalmente */
-    justify-content: center !important;  /* Centra todo el bloque en la pantalla */
-    gap: 60px !important;                /* Espacio de separación entre cada perfil */
-    padding: 40px 20px !important;       /* Separa el contenido de los bordes de la pantalla */
-    flex-wrap: wrap !important;          /* Permite que pasen a la siguiente línea en móviles */
+/* 1. Poner los perfiles uno al lado del otro */
+.uni-card-link {
+    display: inline-block !important;
+    width: 280px !important; 
+    margin: 0 20px 40px 20px !important; 
+    vertical-align: top !important;
 }
 
-.tarjeta-perfil {
-    border: none !important;             /* Elimina el borde visible */
-    background: transparent !important;  /* Quita cualquier fondo blanco o gris */
-    box-shadow: none !important;         /* Elimina sombras */
-    padding: 0 !important;               
-    text-align: center !important;       /* Mantiene el nombre centrado bajo la foto */
+/* Forzar que las columnas de Bootstrap no rompan la fila */
+[class*="col-"]:has(.uni-card-link) {
+    display: inline-block !important;
+    width: auto !important;
+    float: none !important;
 }
 
-.tarjeta-perfil img {
-    width: 200px !important;             /* Ajusta este valor según el tamaño que busques */
-    height: 200px !important;            /* Debe ser idéntico al width */
-    border-radius: 50% !important;       /* Convierte la imagen en un círculo perfecto */
-    object-fit: cover !important;        /* Garantiza que la foto no se estire ni se deforme */
+/* 2. Quitar el recuadro azul y el fondo de la caja */
+.uni-card-box {
     border: none !important;
-    margin: 0 auto 20px auto !important; /* Centra la foto y deja espacio antes del nombre */
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+/* 3. Hacer la foto completamente circular y centrarla */
+.uni-logo {
+    position: static !important;
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 auto !important;
+    display: block !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
 }
 
 
