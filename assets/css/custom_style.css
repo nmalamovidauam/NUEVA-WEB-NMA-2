@@ -882,6 +882,7 @@ section h2, section p, section span {
     opacity: 0.8; /* Se vuelve un pelín transparente para hacer un efecto elegante sin usar verde */
 }
 
+
 /* 1. Poner los perfiles uno al lado del otro */
 .uni-card-link {
     display: inline-block !important;
