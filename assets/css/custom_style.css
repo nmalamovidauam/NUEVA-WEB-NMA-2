@@ -919,4 +919,13 @@ section h2, section p, section span {
     max-height: 100% !important;
 }
 
+/* Efecto clicable para las fotos circulares del equipo */
+.foto-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.foto-hover:hover {
+    transform: scale(1.08) !important; /* Hace la foto un 8% más grande de forma suave */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important; /* Proyecta una sombra elegante */
+}
 
