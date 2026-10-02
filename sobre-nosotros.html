@@ -161,62 +161,101 @@
                         </div> <!-- Cierre de la columna del texto (col-md-8) -->
                     </div> <!-- ¡MUY IMPORTANTE! Cierre del ROW del texto. Esto libera el diseño. -->
 
-                    <!-- NUEVA FILA (ROW) EXCLUSIVA PARA EL EQUIPO -->
-<div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <!-- TÍTULO DE NUESTRO EQUIPO -->
+                    <!-- ==========================================
+     SECCIÓN: NUESTRO EQUIPO
+=========================================== -->
+
+<!-- TÍTULO PRINCIPAL -->
+<div class="row">
     <div class="col-xs-12">
-        <div class="lgx-heading" style="text-align: center; margin-bottom: 50px; margin-top: 40px;">
+        <div class="lgx-heading" style="text-align: center; margin-bottom: 30px; margin-top: 40px;">
             <h2 class="heading">
                 <span lang="es">Nuestro Equipo</span>
                 <span lang="en">Our Team</span>
             </h2>
-            <h3 class="subheading" style="font-size: 1.2rem; color: #040303;">
-                <span lang="es">Universidad Autónoma de Madrid (UAM)</span>
-                <span lang="en">Autonomous University of Madrid (UAM)</span>
-            </h3>
         </div>
     </div>
+</div>
 
+<!-- ==========================================
+     1. UNIVERSIDAD AUTÓNOMA DE MADRID (UAM)
+=========================================== -->
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="subheading" style="text-align: center; font-size: 1.2rem; color: #040303; margin-bottom: 30px;">
+            <span lang="es">Universidad Autónoma de Madrid (UAM)</span>
+            <span lang="en">Autonomous University of Madrid (UAM)</span>
+        </h3>
+    </div>
+</div>
+
+<!-- CONTENEDOR PERFILES UAM (Flexbox puro para forzar la fila) -->
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 50px; margin-bottom: 60px;">
+    
     <!-- MIEMBRO 1: Pablo Postigo Pich-Aguilera -->
-    <div class="col-xs-12 col-sm-4 text-center" style="margin-bottom: 40px;">
-        <a href="https://kr.linkedin.com/in/pablo-postigo-pich-aguilera-76b380266" style="display: inline-block; text-decoration: none;">
+    <div style="text-align: center; width: 260px;">
+        <a href="https://kr.linkedin.com/in/pablo-postigo-pich-aguilera-76b380266" style="display: block; text-decoration: none;">
             <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 15px; text-align: center;">Pablo Postigo Pich-Aguilera</h3>
             <img src="assets/img/expositor/PPP.png" alt="PPP" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; border: none;">
         </a>
     </div>
 
     <!-- MIEMBRO 2: Pablo Ballesteros Cumbreño -->
-    <div class="col-xs-12 col-sm-4 text-center" style="margin-bottom: 40px;">
-        <a href="https://es.linkedin.com/in/pablo-ballesteros-cumbreño-74297628b" style="display: inline-block; text-decoration: none;">
+    <div style="text-align: center; width: 260px;">
+        <a href="https://es.linkedin.com/in/pablo-ballesteros-cumbreño-74297628b" style="display: block; text-decoration: none;">
             <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 15px; text-align: center;">Pablo Ballesteros Cumbreño</h3>
             <img src="assets/img/expositor/PBC.png" alt="PBC" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; border: none;">
         </a>
     </div>
 
     <!-- MIEMBRO 3: Víctor Correa Nieves -->
-    <div class="col-xs-12 col-sm-4 text-center" style="margin-bottom: 40px;">
-        <a href="https://es.linkedin.com/in/víctor-correa-nieves-110aaa300" style="display: inline-block; text-decoration: none;">
+    <div style="text-align: center; width: 260px;">
+        <a href="https://es.linkedin.com/in/víctor-correa-nieves-110aaa300" style="display: block; text-decoration: none;">
             <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 15px; text-align: center;">Víctor Correa Nieves</h3>
             <img src="assets/img/expositor/VCN.png" alt="VCN" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; border: none;">
         </a>
     </div>
-</div> <!-- Cierre del nuevo ROW del equipo -->
+</div> <!-- FIN UAM -->
 
-                    <div class="row">
-                    <h3 class="subheading" style="font-size: 1.2rem; color: #040303;">
-                        <span lang="es">Universidad Autónoma de Barcelona (UAB)</span>
-                        <span lang="en">Autonomous University of Barcelona (UAB)</span>
-                    </h3>
 
-                    </div>
+<!-- ==========================================
+     2. UNIVERSIDAD AUTÓNOMA DE BARCELONA (UAB)
+=========================================== -->
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="subheading" style="text-align: center; font-size: 1.2rem; color: #040303; margin-bottom: 30px;">
+            <span lang="es">Universidad Autónoma de Barcelona (UAB)</span>
+            <span lang="en">Autonomous University of Barcelona (UAB)</span>
+        </h3>
+    </div>
+</div>
 
-                    <div class="row">
-                    <h3 class="subheading" style="font-size: 1.2rem; color: #040303;">
-                        <span lang="es">Universidad Carlos III de Madrid (UC3M)</span>
-                        <span lang="en">Carlos III University of Madrid (UC3M)</span>
-                    </h3>
-                    
-                    </div>
+<!-- CONTENEDOR PERFILES UAB (Flexbox puro) -->
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 50px; margin-bottom: 60px;">
+    
+    <!-- AÑADE AQUÍ LOS MIEMBROS DE LA UAB (Copia la estructura de los de arriba) -->
+    
+</div> <!-- FIN UAB -->
+
+
+<!-- ==========================================
+     3. UNIVERSIDAD CARLOS III DE MADRID (UC3M)
+=========================================== -->
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="subheading" style="text-align: center; font-size: 1.2rem; color: #040303; margin-bottom: 30px;">
+            <span lang="es">Universidad Carlos III de Madrid (UC3M)</span>
+            <span lang="en">Carlos III University of Madrid (UC3M)</span>
+        </h3>
+    </div>
+</div>
+
+<!-- CONTENEDOR PERFILES UC3M (Flexbox puro) -->
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 50px; margin-bottom: 60px;">
+    
+    <!-- AÑADE AQUÍ LOS MIEMBROS DE LA UC3M (Copia la estructura de los de arriba) -->
+
+</div> <!-- FIN UC3M -->
 
                 </div> <!-- Cierre del container -->
             </div> <!-- Cierre de lgx-inner -->
